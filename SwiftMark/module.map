@@ -1,0 +1,5 @@
+module libcmark [system] {
+    header "Dependencies/swift-cmark/src/node.h"
+    header "Dependencies/swift-cmark/src/cmark.h"
+    export *
+}
