@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F16F48C1C280A6F00BC9171 /* SwiftMarkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F48B1C280A6F00BC9171 /* SwiftMarkNode.swift */; };
+		3F16F48F1C280B1D00BC9171 /* NodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F48E1C280B1D00BC9171 /* NodeType.swift */; };
+		3F16F4911C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F4901C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift */; };
 		3F2059A11C258BE8004B84E9 /* SwiftMarkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2059A01C258BE8004B84E9 /* SwiftMarkOption.swift */; };
 		3F4B51321C11C5130012DB9A /* SwiftMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4B51311C11C5130012DB9A /* SwiftMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F4B51391C11C5130012DB9A /* SwiftMarkOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4B512E1C11C5130012DB9A /* SwiftMarkOSX.framework */; };
@@ -49,7 +52,7 @@
 		3FE4F2B81C26A64500AC2FA5 /* cmark_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B51C26A64500AC2FA5 /* cmark_export.h */; };
 		3FE4F2B91C26A64500AC2FA5 /* cmark_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B61C26A64500AC2FA5 /* cmark_version.h */; };
 		3FE4F2BA1C26A64500AC2FA5 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B71C26A64500AC2FA5 /* config.h */; };
-		3FE4F2BC1C26C18100AC2FA5 /* SMarkConvertToHTMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4F2BB1C26C18100AC2FA5 /* SMarkConvertToHTMLOperation.swift */; };
+		3FE4F2BC1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4F2BB1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F16F48B1C280A6F00BC9171 /* SwiftMarkNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkNode.swift; path = Classes/SwiftMarkNode.swift; sourceTree = "<group>"; };
+		3F16F48E1C280B1D00BC9171 /* NodeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeType.swift; path = Enums/NodeType.swift; sourceTree = "<group>"; };
+		3F16F4901C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkConvertToXMLOperation.swift; path = Operations/SwiftMarkConvertToXMLOperation.swift; sourceTree = "<group>"; };
 		3F2059A01C258BE8004B84E9 /* SwiftMarkOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkOption.swift; path = Enums/SwiftMarkOption.swift; sourceTree = "<group>"; };
 		3F4B512E1C11C5130012DB9A /* SwiftMarkOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMarkOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4B51311C11C5130012DB9A /* SwiftMark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SwiftMark.h; path = SwiftMark/SwiftMark.h; sourceTree = "<group>"; };
@@ -110,7 +116,7 @@
 		3FE4F2B51C26A64500AC2FA5 /* cmark_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark_export.h; path = Dependencies/cmark/build/src/cmark_export.h; sourceTree = "<group>"; };
 		3FE4F2B61C26A64500AC2FA5 /* cmark_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark_version.h; path = Dependencies/cmark/build/src/cmark_version.h; sourceTree = "<group>"; };
 		3FE4F2B71C26A64500AC2FA5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = Dependencies/cmark/build/src/config.h; sourceTree = "<group>"; };
-		3FE4F2BB1C26C18100AC2FA5 /* SMarkConvertToHTMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMarkConvertToHTMLOperation.swift; path = Operations/SMarkConvertToHTMLOperation.swift; sourceTree = "<group>"; };
+		3FE4F2BB1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkConvertToHTMLOperation.swift; path = Operations/SwiftMarkConvertToHTMLOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,10 +138,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F16F48D1C280AFE00BC9171 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3F16F48B1C280A6F00BC9171 /* SwiftMarkNode.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		3F2059A21C258C0C004B84E9 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				3F2059A01C258BE8004B84E9 /* SwiftMarkOption.swift */,
+				3F16F48E1C280B1D00BC9171 /* NodeType.swift */,
 			);
 			name = Enums;
 			sourceTree = "<group>";
@@ -167,6 +182,7 @@
 				3F4B53511C1337A50012DB9A /* Dependencies */,
 				3FE4F2BD1C26C18A00AC2FA5 /* Operations */,
 				3F2059A21C258C0C004B84E9 /* Enums */,
+				3F16F48D1C280AFE00BC9171 /* Classes */,
 				3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */,
 				3F8D58161C1339C700D5433B /* SwiftMarkPlayground.playground */,
 			);
@@ -237,7 +253,8 @@
 		3FE4F2BD1C26C18A00AC2FA5 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				3FE4F2BB1C26C18100AC2FA5 /* SMarkConvertToHTMLOperation.swift */,
+				3FE4F2BB1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift */,
+				3F16F4901C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -370,6 +387,7 @@
 				3FE4F29D1C26A62200AC2FA5 /* cmark.c in Sources */,
 				3FE4F29F1C26A62200AC2FA5 /* houdini_href_e.c in Sources */,
 				3FE4F2A71C26A62200AC2FA5 /* man.c in Sources */,
+				3F16F48F1C280B1D00BC9171 /* NodeType.swift in Sources */,
 				3FE4F2A91C26A62200AC2FA5 /* references.c in Sources */,
 				3FE4F29E1C26A62200AC2FA5 /* commonmark.c in Sources */,
 				3FE4F29A1C26A62200AC2FA5 /* blocks.c in Sources */,
@@ -379,9 +397,11 @@
 				3F2059A11C258BE8004B84E9 /* SwiftMarkOption.swift in Sources */,
 				3FE4F2A51C26A62200AC2FA5 /* latex.c in Sources */,
 				3FE4F2AD1C26A62200AC2FA5 /* xml.c in Sources */,
+				3F16F48C1C280A6F00BC9171 /* SwiftMarkNode.swift in Sources */,
 				3FE4F2A01C26A62200AC2FA5 /* houdini_html_e.c in Sources */,
+				3F16F4911C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift in Sources */,
 				3FE4F2AC1C26A62200AC2FA5 /* utf8.c in Sources */,
-				3FE4F2BC1C26C18100AC2FA5 /* SMarkConvertToHTMLOperation.swift in Sources */,
+				3FE4F2BC1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift in Sources */,
 				3FE4F2AB1C26A62200AC2FA5 /* scanners.c in Sources */,
 				3F4B51B01C11D9D80012DB9A /* SwiftMark.swift in Sources */,
 				3FE4F2A21C26A62200AC2FA5 /* html.c in Sources */,
