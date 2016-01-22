@@ -1,3 +1,0 @@
-[submodule "SwiftMark/Dependencies/cmark"]
-	path = SwiftMark/Dependencies/cmark
-	url = https://github.com/jgm/cmark

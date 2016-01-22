@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExampleIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrb-dp-EJv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Title" id="A06-rO-P7t">
+                                        <barButtonItem key="rightBarButtonItem" title="Convert" id="RtK-IH-rog">
+                                            <connections>
+                                                <segue destination="S1c-Ad-5bN" kind="showDetail" id="lfn-3J-qY5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ioZ-Mw-LQn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rrb-dp-EJv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="55e-iP-F4E"/>
+                            <constraint firstItem="ioZ-Mw-LQn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="B46-TR-hgR"/>
+                            <constraint firstItem="ioZ-Mw-LQn" firstAttribute="top" secondItem="rrb-dp-EJv" secondAttribute="bottom" id="UQV-Xr-Nlq"/>
+                            <constraint firstItem="rrb-dp-EJv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="csr-hB-uXO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rrb-dp-EJv" secondAttribute="trailing" constant="-20" id="eid-6T-lnY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ioZ-Mw-LQn" secondAttribute="bottom" id="kqW-6E-Uuq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ioZ-Mw-LQn" secondAttribute="trailing" constant="-20" id="xmI-BS-TjI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="rrb-dp-EJv"/>
+                                <exclude reference="ioZ-Mw-LQn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="kqW-6E-Uuq"/>
+                                <exclude reference="55e-iP-F4E"/>
+                                <exclude reference="csr-hB-uXO"/>
+                                <exclude reference="eid-6T-lnY"/>
+                                <exclude reference="B46-TR-hgR"/>
+                                <exclude reference="UQV-Xr-Nlq"/>
+                                <exclude reference="xmI-BS-TjI"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="rrb-dp-EJv"/>
+                                <include reference="ioZ-Mw-LQn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="kqW-6E-Uuq"/>
+                                <include reference="55e-iP-F4E"/>
+                                <include reference="csr-hB-uXO"/>
+                                <include reference="eid-6T-lnY"/>
+                                <include reference="B46-TR-hgR"/>
+                                <include reference="UQV-Xr-Nlq"/>
+                                <include reference="xmI-BS-TjI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="399"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="U1K-DT-QZN">
+            <objects>
+                <viewController id="S1c-Ad-5bN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zkO-Cy-9rh"/>
+                        <viewControllerLayoutGuide type="bottom" id="h7f-mk-ntA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hMe-ba-KUR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AUn-qk-QQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315.5" y="399"/>
+        </scene>
+    </scenes>
+</document>

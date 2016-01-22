@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C69AEF186BCB253574FB35C31A5729EF33F0AEEC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "960DCF543335492D3B9E5F6D4B8E1AF53AF06834" : 0,
+    "C69AEF186BCB253574FB35C31A5729EF33F0AEEC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C778269F-45B8-49E6-8A25-388E42339F4D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "960DCF543335492D3B9E5F6D4B8E1AF53AF06834" : "SwiftMark\/SwiftMark\/Dependencies\/cmark\/",
+    "C69AEF186BCB253574FB35C31A5729EF33F0AEEC" : "SwiftMark\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftMark",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SwiftMark.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jgm\/cmark",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "960DCF543335492D3B9E5F6D4B8E1AF53AF06834"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Pyroh\/SwiftMark.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C69AEF186BCB253574FB35C31A5729EF33F0AEEC"
+    }
+  ]
+}
