@@ -8,9 +8,10 @@
 
 import Foundation
 
-public typealias ConversionCompletionBlock = (String) -> ()
+public typealias ConversionCompleteBlock = (String) -> ()
 public typealias FailureBlock = (SwiftMarkError) -> ()
 
+/// <#Description#>
 public class SwiftMarkOperation: NSOperation {
     private let markdownText: String?
     private let fileURL: NSURL?
@@ -18,7 +19,7 @@ public class SwiftMarkOperation: NSOperation {
     
     internal let options: SwiftMarkOptions
     
-    public var conversionCompleteBlock: ConversionCompletionBlock?
+    public var conversionCompleteBlock: ConversionCompleteBlock?
     public var failureBlock: FailureBlock?
     
     internal init(text: String, options: SwiftMarkOptions = .Default) {

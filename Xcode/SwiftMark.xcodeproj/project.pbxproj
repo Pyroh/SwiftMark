@@ -66,8 +66,6 @@
 		3F4B51391C11C5130012DB9A /* SwiftMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4B512E1C11C5130012DB9A /* SwiftMark.framework */; };
 		3F4B513E1C11C5130012DB9A /* SwiftMarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B513D1C11C5130012DB9A /* SwiftMarkTests.swift */; };
 		3F4B51B01C11D9D80012DB9A /* SwiftMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */; };
-		3F5D16F91C52C8CD003C4273 /* case_fold_switch.inc in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D16F81C52C8CD003C4273 /* case_fold_switch.inc */; };
-		3F5D16FB1C52C906003C4273 /* entities.inc in Sources */ = {isa = PBXBuildFile; fileRef = 3F5D16FA1C52C906003C4273 /* entities.inc */; };
 		3F5D16FC1C52CACA003C4273 /* SwiftMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0E44551C4964F600E0405E /* SwiftMark.framework */; };
 		3F5D16FD1C52CACA003C4273 /* SwiftMark.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0E44551C4964F600E0405E /* SwiftMark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F6178131C48C92F007FA2A0 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6178121C48C92F007FA2A0 /* NSAttributedStringExtension.swift */; };
@@ -187,7 +185,7 @@
 		3F4B513D1C11C5130012DB9A /* SwiftMarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMarkTests.swift; sourceTree = "<group>"; };
 		3F4B513F1C11C5130012DB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMark.swift; path = ../../Sources/SwiftMark.swift; sourceTree = "<group>"; };
-		3F4B53501C1336B70012DB9A /* module.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.map; path = ../Sources/module.map; sourceTree = "<group>"; };
+		3F4B53501C1336B70012DB9A /* module.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.map; path = ../../Sources/module.map; sourceTree = "<group>"; };
 		3F5D16F81C52C8CD003C4273 /* case_fold_switch.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = case_fold_switch.inc; path = ../../Sources/cmark/case_fold_switch.inc; sourceTree = "<group>"; };
 		3F5D16FA1C52C906003C4273 /* entities.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = entities.inc; sourceTree = "<group>"; };
 		3F6178121C48C92F007FA2A0 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtension.swift; path = ../../Sources/Extensions/NSAttributedStringExtension.swift; sourceTree = "<group>"; };
@@ -314,7 +312,7 @@
 		3F4B51241C11C5130012DB9A = {
 			isa = PBXGroup;
 			children = (
-				3F4B53501C1336B70012DB9A /* module.map */,
+				3F5D17011C52D3A7003C4273 /* Common */,
 				3F4B51301C11C5130012DB9A /* SwiftMarkOSX */,
 				3F0E44561C4964F600E0405E /* SwiftMarkIOS */,
 				3F61781A1C4929F2007FA2A0 /* ExampleOSX */,
@@ -339,11 +337,7 @@
 		3F4B51301C11C5130012DB9A /* SwiftMarkOSX */ = {
 			isa = PBXGroup;
 			children = (
-				3F4B53521C1337B20012DB9A /* cmark */,
 				3F6178141C48CADB007FA2A0 /* Extensions */,
-				3FE4F2BD1C26C18A00AC2FA5 /* Operations */,
-				3F2059A21C258C0C004B84E9 /* Enums */,
-				3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */,
 				3F4B51311C11C5130012DB9A /* SwiftMark.h */,
 				3F4B51331C11C5130012DB9A /* Info.plist */,
 			);
@@ -405,6 +399,19 @@
 			);
 			name = cmark;
 			path = ../../Sources/cmark;
+			sourceTree = "<group>";
+		};
+		3F5D17011C52D3A7003C4273 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3F4B53521C1337B20012DB9A /* cmark */,
+				3FE4F2BD1C26C18A00AC2FA5 /* Operations */,
+				3F2059A21C258C0C004B84E9 /* Enums */,
+				3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */,
+				3F4B53501C1336B70012DB9A /* module.map */,
+			);
+			name = Common;
+			path = SwiftMark;
 			sourceTree = "<group>";
 		};
 		3F6178141C48CADB007FA2A0 /* Extensions */ = {
@@ -751,9 +758,7 @@
 				3FE4F2A31C26A62200AC2FA5 /* inlines.c in Sources */,
 				3FE4F29B1C26A62200AC2FA5 /* buffer.c in Sources */,
 				3FE4F29C1C26A62200AC2FA5 /* cmark_ctype.c in Sources */,
-				3F5D16FB1C52C906003C4273 /* entities.inc in Sources */,
 				3FE4F2A11C26A62200AC2FA5 /* houdini_html_u.c in Sources */,
-				3F5D16F91C52C8CD003C4273 /* case_fold_switch.inc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

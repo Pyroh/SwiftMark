@@ -9,10 +9,11 @@
 import Foundation
 import libcmark
 
- /**
- Convert `str` to HTML with `options` passed as argument to the parser.
+/**
+ Produce the HTML string corresponding to the given CommonMark string.  
+ Using default options `SwiftMarkOptions.Default`
  
- - returns: The corresponding HTML string or nil on error.
+ - throws: `SwiftMark.ParsingError` if something goes wrong.
  */
 public func commonMarkToHTML(str: String, options: SwiftMarkOptions = .Default) throws -> String {
     var buffer: String?
@@ -26,9 +27,10 @@ public func commonMarkToHTML(str: String, options: SwiftMarkOptions = .Default) 
 }
 
 /**
- Convert `str` to LATEX with `options` passed as argument to the parser.
+ Produce the LATEX string corresponding to the given CommonMark string.
+ Using default options `SwiftMarkOptions.Default`
  
- - returns: The corresponding LATEX string or nil on error.
+ - throws: `SwiftMark.ParsingError` if something goes wrong.
  */
 public func commonMarkToLATEX(str: String, width: Int32 = 0, options: SwiftMarkOptions = .Default) throws -> String {
     guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.ParsingError }
@@ -41,9 +43,10 @@ public func commonMarkToLATEX(str: String, width: Int32 = 0, options: SwiftMarkO
 }
 
 /**
- Convert `str` to XML with `options` passed as argument to the parser.
+ Produce the XML string corresponding to the given CommonMark string.
+ Using default options `SwiftMarkOptions.Default`
  
- - returns: The corresponding XML string or nil on error.
+ - throws: `SwiftMark.ParsingError` if something goes wrong.
  */
 public func commonMarkToXML(str: String, options: SwiftMarkOptions = .Default) throws -> String {
     guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.ParsingError }
@@ -57,10 +60,9 @@ public func commonMarkToXML(str: String, options: SwiftMarkOptions = .Default) t
     return output
 }
 
-/**
- Tokenize the CommonMark string `str`.
- 
- - returns: The CommonMark node tree corresponding to `str` or nil on error.
+ /**
+ Tokenize the given CommonMark string.
+ Using default options `SwiftMarkOptions.Default`
  */
 internal func commonMarkAST(str: String, options: SwiftMarkOptions = .Default) -> UnsafeMutablePointer<cmark_node>? {
     var ast: UnsafeMutablePointer<cmark_node>?
@@ -70,34 +72,14 @@ internal func commonMarkAST(str: String, options: SwiftMarkOptions = .Default) -
     return ast
 }
 
+/**
+ Load CommonMark from `url` using the specified encoding.
+ 
+ - throws: `SwiftMarkError.FileLoadingError` if something goes wrong during file access.
+ */
 internal func loadCommonMarkFromURL(url: NSURL, encoding: UInt = NSUnicodeStringEncoding) throws -> String {
     guard let data = NSData(contentsOfURL: url), str = String(data: data, encoding: encoding) else {
         throw SwiftMarkError.FileLoadingError
     }
     return str
-}
-
-/**
- Prints out CommonMark AST to stdout.
- For internal use only.
- */
-internal func debugAST(ast: UnsafeMutablePointer<cmark_node>) {
-    func printBuffer(ast: UnsafeMutablePointer<cmark_node>, depth: Int) {
-        guard let type = NodeType(rawValue: Int(ast.memory.type.rawValue)) else { return }
-        var buffer = ""
-        0.stride(to: depth, by: 1).forEach {_ in
-            buffer += "  "
-        }
-        
-        print("\(buffer) \(type): (\(ast.memory.start_line):\(ast.memory.start_column)):(\(ast.memory.end_line):\(ast.memory.end_column))")
-        
-        if ast.memory.first_child != nil {
-            printBuffer(ast.memory.first_child, depth: depth + 1)
-        }
-        if ast.memory.next != nil {
-            printBuffer(ast.memory.next, depth: depth)
-        }
-    }
-    printBuffer(ast, depth: 0)
-    cmark_node_free(ast)
 }
