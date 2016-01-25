@@ -24,6 +24,8 @@ static inline void outc(cmark_renderer *renderer, cmark_escaping escape,
                         int32_t c, unsigned char nextc) {
   bool needs_escaping = false;
   char encoded[20];
+  bool follows_digit = renderer->buffer->size > 0 &&
+	  cmark_isdigit(renderer->buffer->ptr[renderer->buffer->size - 1]);
 
   needs_escaping =
       escape != LITERAL &&
@@ -31,9 +33,12 @@ static inline void outc(cmark_renderer *renderer, cmark_escaping escape,
         (c == '*' || c == '_' || c == '[' || c == ']' || c == '#' || c == '<' ||
          c == '>' || c == '\\' || c == '`' || c == '!' ||
          (c == '&' && isalpha(nextc)) || (c == '!' && nextc == '[') ||
-         (renderer->begin_line && (c == '-' || c == '+' || c == '=')) ||
-         ((c == '.' || c == ')') &&
-          isdigit(renderer->buffer->ptr[renderer->buffer->size - 1])))) ||
+         (renderer->begin_content && (c == '-' || c == '+' || c == '=') &&
+	  // begin_content doesn't get set to false til we've passed digits
+	  // at the beginning of line, so...
+	  !follows_digit) ||
+         (renderer->begin_content && (c == '.' || c == ')') && follows_digit &&
+	  (nextc == 0 || cmark_isspace(nextc))))) ||
        (escape == URL && (c == '`' || c == '<' || c == '>' || isspace(c) ||
                           c == '\\' || c == ')' || c == '(')) ||
        (escape == TITLE &&
@@ -121,6 +126,9 @@ static bool is_autolink(cmark_node *node) {
   }
 
   link_text = node->first_child;
+  if (link_text == NULL) {
+    return false;
+  }
   cmark_consolidate_text_nodes(link_text);
   realurl = (char *)url->data;
   realurllen = url->len;
@@ -135,12 +143,17 @@ static bool is_autolink(cmark_node *node) {
 
 // if node is a block node, returns node.
 // otherwise returns first block-level node that is an ancestor of node.
+// if there is no block-level ancestor, returns NULL.
 static cmark_node *get_containing_block(cmark_node *node) {
-  while (node && (node->type < CMARK_NODE_FIRST_BLOCK ||
-                  node->type > CMARK_NODE_LAST_BLOCK)) {
-    node = node->parent;
+  while (node) {
+    if (node->type >= CMARK_NODE_FIRST_BLOCK &&
+        node->type <= CMARK_NODE_LAST_BLOCK) {
+      return node;
+    } else {
+      node = node->parent;
+    }
   }
-  return node;
+  return NULL;
 }
 
 static int S_render_node(cmark_renderer *renderer, cmark_node *node,
@@ -163,10 +176,11 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
   if (!(node->type == CMARK_NODE_ITEM && node->prev == NULL && entering)) {
     tmp = get_containing_block(node);
     renderer->in_tight_list_item =
-        (tmp->type == CMARK_NODE_ITEM &&
-         cmark_node_get_list_tight(tmp->parent)) ||
-        (tmp && tmp->parent && tmp->parent->type == CMARK_NODE_ITEM &&
-         cmark_node_get_list_tight(tmp->parent->parent));
+	tmp &&  // tmp might be NULL if there is no containing block
+        ((tmp->type == CMARK_NODE_ITEM &&
+          cmark_node_get_list_tight(tmp->parent)) ||
+         (tmp && tmp->parent && tmp->parent->type == CMARK_NODE_ITEM &&
+          cmark_node_get_list_tight(tmp->parent->parent)));
   }
 
   switch (node->type) {
@@ -176,6 +190,7 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
   case CMARK_NODE_BLOCK_QUOTE:
     if (entering) {
       LIT("> ");
+      renderer->begin_content = true;
       cmark_strbuf_puts(renderer->prefix, "> ");
     } else {
       cmark_strbuf_truncate(renderer->prefix, renderer->prefix->size - 2);
@@ -186,15 +201,17 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
   case CMARK_NODE_LIST:
     if (!entering && node->next && (node->next->type == CMARK_NODE_CODE_BLOCK ||
                                     node->next->type == CMARK_NODE_LIST)) {
-      // this ensures 2 blank lines after list,
-      // if before code block or list:
-      LIT("\n");
+      // this ensures that a following code block or list will be
+      // inteprereted correctly.
+      CR();
+      LIT("<!-- end list -->");
+      BLANKLINE();
     }
     break;
 
   case CMARK_NODE_ITEM:
     if (cmark_node_get_list_type(node->parent) == CMARK_BULLET_LIST) {
-      marker_width = 2;
+      marker_width = 4;
     } else {
       list_number = cmark_node_get_list_start(node->parent);
       list_delim = cmark_node_get_list_delim(node->parent);
@@ -213,13 +230,14 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
     }
     if (entering) {
       if (cmark_node_get_list_type(node->parent) == CMARK_BULLET_LIST) {
-        LIT("* ");
-        cmark_strbuf_puts(renderer->prefix, "  ");
+        LIT("  - ");
+        renderer->begin_content = true;
       } else {
         LIT(listmarker);
-        for (i = marker_width; i--;) {
-          cmark_strbuf_putc(renderer->prefix, ' ');
-        }
+        renderer->begin_content = true;
+      }
+      for (i = marker_width; i--;) {
+        cmark_strbuf_putc(renderer->prefix, ' ');
       }
     } else {
       cmark_strbuf_truncate(renderer->prefix,
@@ -228,12 +246,13 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
     }
     break;
 
-  case CMARK_NODE_HEADER:
+  case CMARK_NODE_HEADING:
     if (entering) {
-      for (i = cmark_node_get_header_level(node); i > 0; i--) {
+      for (i = cmark_node_get_heading_level(node); i > 0; i--) {
         LIT("#");
       }
       LIT(" ");
+      renderer->begin_content = true;
       renderer->no_wrap = true;
     } else {
       renderer->no_wrap = false;
@@ -279,13 +298,20 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
     BLANKLINE();
     break;
 
-  case CMARK_NODE_HTML:
+  case CMARK_NODE_HTML_BLOCK:
     BLANKLINE();
     OUT(cmark_node_get_literal(node), false, LITERAL);
     BLANKLINE();
     break;
 
-  case CMARK_NODE_HRULE:
+  case CMARK_NODE_CUSTOM_BLOCK:
+    BLANKLINE();
+    OUT(entering ? cmark_node_get_on_enter(node) : cmark_node_get_on_exit(node),
+        false, LITERAL);
+    BLANKLINE();
+    break;
+
+  case CMARK_NODE_THEMATIC_BREAK:
     BLANKLINE();
     LIT("-----");
     BLANKLINE();
@@ -303,7 +329,7 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
 
   case CMARK_NODE_LINEBREAK:
     if (!(CMARK_OPT_HARDBREAKS & options)) {
-      LIT("\\");
+      LIT("  ");
     }
     CR();
     break;
@@ -335,8 +361,13 @@ static int S_render_node(cmark_renderer *renderer, cmark_node *node,
     }
     break;
 
-  case CMARK_NODE_INLINE_HTML:
+  case CMARK_NODE_HTML_INLINE:
     OUT(cmark_node_get_literal(node), false, LITERAL);
+    break;
+
+  case CMARK_NODE_CUSTOM_INLINE:
+    OUT(entering ? cmark_node_get_on_enter(node) : cmark_node_get_on_exit(node),
+        false, LITERAL);
     break;
 
   case CMARK_NODE_STRONG:
