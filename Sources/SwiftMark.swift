@@ -9,11 +9,15 @@
 import Foundation
 import libcmark
 
-/**
- Produce the HTML string corresponding to the given CommonMark string.  
- Using default options `SwiftMarkOptions.Default`
+ /**
+ Produce the HTML string corresponding to the given CommonMark text using given options.
+ 
+ - parameter str:     The *CommonMark* string to convert.
+ - parameter options: The options passed to the parser.
  
  - throws: `SwiftMark.ParsingError` if something goes wrong.
+ 
+ - returns: The HTML string produced by the *CommonMark* parser.
  */
 public func commonMarkToHTML(str: String, options: SwiftMarkOptions = .Default) throws -> String {
     var buffer: String?
@@ -27,10 +31,14 @@ public func commonMarkToHTML(str: String, options: SwiftMarkOptions = .Default) 
 }
 
 /**
- Produce the XML string corresponding to the given CommonMark string.
- Using default options `SwiftMarkOptions.Default`
+ Produce the XML string corresponding to the given CommonMark text using given options.
+ 
+ - parameter str:     The *CommonMark* string to convert.
+ - parameter options: The options passed to the parser.
  
  - throws: `SwiftMark.ParsingError` if something goes wrong.
+ 
+ - returns: The XML string produced by the *CommonMark* parser.
  */
 public func commonMarkToXML(str: String, options: SwiftMarkOptions = .Default) throws -> String {
     guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.ParsingError }
@@ -44,12 +52,6 @@ public func commonMarkToXML(str: String, options: SwiftMarkOptions = .Default) t
     return output
 }
 
-/**
- Produce the LATEX string corresponding to the given CommonMark string.
- Using default options `SwiftMarkOptions.Default`
- 
- - throws: `SwiftMark.ParsingError` if something goes wrong.
- */
 private func commonMarkToLATEX(str: String, width: Int32 = 0, options: SwiftMarkOptions = .Default) throws -> String {
     guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.ParsingError }
     let buf = cmark_render_latex(ast, options.rawValue, width)
@@ -61,8 +63,7 @@ private func commonMarkToLATEX(str: String, width: Int32 = 0, options: SwiftMark
 }
 
  /**
- Tokenize the given CommonMark string.
- Using default options `SwiftMarkOptions.Default`
+ Tokenize the given *CommonMark* string using given options.
  */
 internal func commonMarkAST(str: String, options: SwiftMarkOptions = .Default) -> UnsafeMutablePointer<cmark_node>? {
     var ast: UnsafeMutablePointer<cmark_node>?

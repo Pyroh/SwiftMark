@@ -1,4 +1,4 @@
-[![**Swift***Mark* logo](https://cloud.githubusercontent.com/assets/5583681/12582023/ad6d8c7c-c43a-11e5-9336-030cd8520cea.png)]()
+![swiftmarklogo](https://cloud.githubusercontent.com/assets/5583681/12586335/269206cc-c450-11e5-81eb-ebf8407c2c01.png)
 [![Swift](https://img.shields.io/badge/swift-2.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms](https://img.shields.io/badge/platform-osx%20%7C%20ios-lightgrey.svg)](https://developer.apple.com/swift/)
 [![License](https://img.shields.io/badge/license-MIT-71787A.svg)](https://tldrlegal.com/license/mit-license)
@@ -82,13 +82,14 @@ You can dispatch the conversion process on another thread if you prefer. **Swift
 I think each class is self-explanatory.
 
 In order to convert a *CommonMark* text you must :
-1. Create a new SwiftMarkOperation object
+
+1. Create a new SwiftMarkOperation object  
 	`let op = SwiftMarkToHTMLOperation(text: md)`
 
-2. Set the closure which will be executed once the conversion is done
+2. Set the closure which will be executed once the conversion is done  
 	`op.conversionCompleteBlock = { html in …}`
 
-3. Optionally set the closure which will be called in case of failure
+3. Optionally set the closure which will be called in case of failure  
 	`op.failureBlock = { error in …}`
 
 Now it's up to you: 

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SwiftMark  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SwiftMark  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SwiftMark Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/Pyroh/SwiftMark"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SwiftMark Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SwiftMark  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SwiftMarkOperation.html">SwiftMarkOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SwiftMarkToHTMLOperation.html">SwiftMarkToHTMLOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SwiftMarkToXMLOperation.html">SwiftMarkToXMLOperation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:O9SwiftMark14SwiftMarkError">SwiftMarkError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F9SwiftMark16commonMarkToHTMLFzTSS7optionsVS_16SwiftMarkOptions_SS">commonMarkToHTML(_:options:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F9SwiftMark15commonMarkToXMLFzTSS7optionsVS_16SwiftMarkOptions_SS">commonMarkToXML(_:options:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/SwiftMarkOptions.html">SwiftMarkOptions</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <p><img src="https://cloud.githubusercontent.com/assets/5583681/12586335/269206cc-c450-11e5-81eb-ebf8407c2c01.png" alt="swiftmarklogo">
+<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/swift-2.1-orange.svg?style=flat" alt="Swift"></a>
+<a href="https://developer.apple.com/swift/"><img src="https://img.shields.io/badge/platform-osx%20%7C%20ios-lightgrey.svg" alt="Platforms"></a>
+<a href="https://tldrlegal.com/license/mit-license"><img src="https://img.shields.io/badge/license-MIT-71787A.svg" alt="License"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a></p>
+<a href='#goals' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='goals'>Goals</h2>
+
+<p><strong>Swift</strong><em>Mark</em> is not only a wrapper of the C library cmark but it also relies on it to provide users a complete Swift <a href="http://commonmark.org"><em>CommonMark</em></a> framework.<br>
+This framework offers high-level API to convert any <a href="http://commonmark.org"><em>CommonMark</em></a> text to HTML, XML and soon LATEX.</p>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>OS X 10.10+ / iOS 8.0+</li>
+<li>Xcode 7.2+</li>
+</ul>
+<a href='#setup' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='setup'>Setup</h2>
+<a href='#using_carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='using_carthage'>Using Carthage</h3>
+
+<p>Add <code>github &quot;Pyroh/SwiftMark&quot; ~&gt; 0.9</code> to your <code>Cartfile</code> and run <code>carthage update</code>. If you need help using Carthage you can take a look at their <a href="https://github.com/Carthage/Carthage#getting-started">Getting Started</a> section.</p>
+<a href='#manually' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manually'>Manually</h3>
+
+<ol>
+<li>Clone this repository.</li>
+<li>Build the <code>SwiftMark</code> project.</li>
+<li>Add the resulting <code>framework</code> file to your project.</li>
+<li>?</li>
+<li>Profit.</li>
+</ol>
+<a href='#synchronous_vs_asynchronous' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='synchronous_vs_asynchronous'>Synchronous vs. Asynchronous</h2>
+
+<p>With <strong>Swift</strong><em>Mark</em> you are able to convert <a href="http://commonmark.org"><em>CommonMark</em></a> text synchronously or asynchronously. </p>
+<a href='#synchronous_method' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='synchronous_method'>Synchronous method:</h3>
+
+<p>Simply use a conversion functions:</p>
+<pre class="highlight plaintext"><code>let md = "**Swift***Mark*"
+if let html = try? commonMarkToHTML(md){
+    // html = "&lt;p&gt;&lt;b&gt;Swift&lt;/b&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;"
+    // do something with html…
+}
+</code></pre>
+<a href='#asynchronous_method' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='asynchronous_method'>Asynchronous method</h3>
+
+<p>Asynchronous convert process rely on <em>Grand Central Dispatch</em> through <code>NSOperation</code> subclasses.<br>
+You should instantiate one of this subclasses and manage result or failure in a closure:</p>
+<pre class="highlight plaintext"><code>let md = "**Swift***Mark*"
+
+let op = SwiftMarkToHTMLOperation(text: md)
+op.conversionCompleteBlock = { html in
+    // html = "&lt;p&gt;&lt;b&gt;Swift&lt;/b&gt;&lt;em&gt;Mark&lt;/em&gt;&lt;/p&gt;"
+    // do something with html…
+}
+op.failureBlock = { error in
+    // Handle the error.
+}
+
+// Provided that queue is an NSOperationQueue object.
+queue.addOperation(op)
+
+// If you don't want to use NSOperationQueue just
+queue.start()
+</code></pre>
+<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='documentation'>Documentation</h2>
+
+<blockquote>
+<p>This is just a quick help. You would like to take a look at the full documentation.</p>
+</blockquote>
+<a href='#functions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='functions'>Functions</h3>
+
+<p><strong>Swift</strong><em>Mark</em> offers two global functions:
+- <code>commonMarkToHTML(str: String, options: SwiftMarkOptions = .Default)</code>
+- <code>commonMarkToXML(str: String, options: SwiftMarkOptions = .Default)</code></p>
+
+<p>These two functions produce HTML or XML code based on a given <a href="http://commonmark.org"><em>CommonMark</em></a> text. Each function can throw an error if there&rsquo;s been a problem during the parsing process.
+(For available options please refer to full documentation)</p>
+<a href='#operations' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='operations'>Operations</h3>
+
+<p>You can dispatch the conversion process on another thread if you prefer. <strong>Swift</strong><em>Mark</em> enables you to do so simply by using a subclass of <code>SwiftMarkOperation</code> which is a subclass of <code>NSOperation</code>. There&rsquo;s two of these subclasses available:</p>
+
+<ul>
+<li><code>SwiftMarkToHTMLOperation</code></li>
+<li><code>SwiftMarkToXMLOperation</code></li>
+</ul>
+
+<p>I think each class is self-explanatory.</p>
+
+<p>In order to convert a <em>CommonMark</em> text you must :</p>
+
+<ol>
+<li><p>Create a new SwiftMarkOperation object<br>
+<code>let op = SwiftMarkToHTMLOperation(text: md)</code></p></li>
+<li><p>Set the closure which will be executed once the conversion is done<br>
+<code>op.conversionCompleteBlock = { html in …}</code></p></li>
+<li><p>Optionally set the closure which will be called in case of failure<br>
+<code>op.failureBlock = { error in …}</code></p></li>
+</ol>
+
+<p>Now it&rsquo;s up to you: 
+- You add your operation to an <code>NSOperationQueue</code>.
+- You manually start your operation.</p>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+
+<p><strong>Swift</strong><em>Mark</em> is released under the MIT license. See LICENSE for details.</p>
+
+<p>The cmark library used to build <strong>Swift</strong><em>Mark</em> is Copyright &copy; 2014, John MacFarlane. More information in <a href="https://raw.githubusercontent.com/Pyroh/SwiftMark/master/Sources/cmark/COPYING">COPYING</a>.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/Pyroh/" target="_blank" rel="external">Pierre Tacchi</a>. All rights reserved. (Last updated: 2016-01-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

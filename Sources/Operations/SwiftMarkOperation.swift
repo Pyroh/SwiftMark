@@ -10,17 +10,21 @@ import Foundation
 
 public typealias ConversionCompleteBlock = (String) -> ()
 public typealias FailureBlock = (SwiftMarkError) -> ()
-
+ /// The `SwiftMarkOperation` class is the abstarct base class for all operation executed in order to convert *CommonMark* texts. Do not subclass or create instances of this class directly. Instead, create instances of one of its concrete subclasses.
+ ///
+ /// Use the properties of this class to configure the behavior of the operation object before submitting it to an operation queue or executing it directly.
 public class SwiftMarkOperation: NSOperation {
     private let markdownText: String?
     private let fileURL: NSURL?
     private let encoding: UInt
     
-    internal let options: SwiftMarkOptions
-    
+        /// The options passed to the parser.
+    public let options: SwiftMarkOptions
+        /// The block to execute with the result of the conversion.
     public var conversionCompleteBlock: ConversionCompleteBlock?
+        /// The block to execute when an error occurs.
     public var failureBlock: FailureBlock?
-    
+
     internal init(text: String, options: SwiftMarkOptions = .Default) {
         self.markdownText = text
         self.options = options
