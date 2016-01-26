@@ -9,14 +9,6 @@
 import Cocoa
 
 public extension NSAttributedString {
-    /**
-     Return an initialized `NSAttributedString` object representing the given HTML string. If `css` is not `nil` the object's text attributes are set accordingly to the stylesheet.
-     
-     - parameter html: The HTML string.
-     - parameter css:  The CSS string.
-     
-     - returns: The resulting `NSAttributedString`.
-     */
     public class func attributedStringFromHTML(html: String, withCSSString css: String?) -> NSAttributedString {
         var head = "<head>\n"
         head += "<meta charset=\"utf-8\">\n"

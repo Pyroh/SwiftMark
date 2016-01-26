@@ -1,8 +1,9 @@
-![swiftmarklogo](https://cloud.githubusercontent.com/assets/5583681/12586335/269206cc-c450-11e5-81eb-ebf8407c2c01.png)
-[![Swift](https://img.shields.io/badge/swift-2.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift](https://img.shields.io/badge/Swift-2.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Platforms](https://img.shields.io/badge/platform-osx%20%7C%20ios-lightgrey.svg)](https://developer.apple.com/swift/)
 [![License](https://img.shields.io/badge/license-MIT-71787A.svg)](https://tldrlegal.com/license/mit-license)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Dash compatible](https://img.shields.io/badge/Dash-compatible-593BB1.svg)](https://kapeli.com/dash)
+![swiftmarklogo](https://cloud.githubusercontent.com/assets/5583681/12586335/269206cc-c450-11e5-81eb-ebf8407c2c01.png)
 
 ## Goals
 **Swift***Mark* is not only a wrapper of the C library cmark but it also relies on it to provide users a complete Swift [*CommonMark*](http://commonmark.org) framework.  
@@ -63,7 +64,7 @@ queue.start()
 ```
 
 ## Documentation
-> This is just a quick help. You would like to take a look at the full documentation.
+Full documentation is available [here](http://pyroh.github.io/docs/SwiftMark/index.html)
 
 ### Functions
 **Swift***Mark* offers two global functions:
@@ -95,6 +96,18 @@ In order to convert a *CommonMark* text you must :
 Now it's up to you: 
 - You add your operation to an `NSOperationQueue`.
 - You manually start your operation.
+
+### Generate documentation
+- Be sure [jazzy](https://github.com/Realm/jazzy) is installed.
+- Go to `Documentation` folder.
+- Run `sh gendoc.sh` or `chmod +x gendoc.sh && ./gendoc.sh`
+
+## TODO
+- [ ] LATEX support.
+- [ ] iOS sample code.
+- [ ] Give user access to document's AST… the Swift way… 
+- [ ] Tests.
+- [ ] CocoaPods support.
 
 ## License
 **Swift***Mark* is released under the MIT license. See LICENSE for details.
