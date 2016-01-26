@@ -37,7 +37,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
     private func requestCommonMarkConversion() {
         guard let md = inputTextView.string else { return }
         if async {
-            let op = SwiftMarkConvertToHTMLOperation(text: md)
+            let op = SwiftMarkToHTMLOperation(text: md)
             op.conversionCompleteBlock = { html in
                 dispatch_sync(dispatch_get_main_queue()) { [unowned self] in
                     self.attributedTextView.textStorage?.setAttributedString(NSAttributedString.attributedStringFromHTML(html, withCSSString: self.cssString))
@@ -47,6 +47,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
                 self.attributedTextView.string = "!! ERROR !!"
             }
             queue.addOperation(op)
+            
         } else {
             if let html = try? commonMarkToHTML(md) {
                 self.attributedTextView.textStorage?.setAttributedString(NSAttributedString.attributedStringFromHTML(html, withCSSString: self.cssString))

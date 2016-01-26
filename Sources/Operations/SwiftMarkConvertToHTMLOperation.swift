@@ -9,7 +9,7 @@
 import Foundation
 
 /// A `SwiftMarkConvertToHTMLOperation`
-public class SwiftMarkConvertToHTMLOperation: SwiftMarkOperation {
+public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
     public override init(text: String, options: SwiftMarkOptions = .Default) {
         super.init(text: text, options: options)
     }

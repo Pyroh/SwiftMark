@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3F0617DF1C4E3D7100A3DE0B"
-               BuildableName = "ExampleIOS.app"
-               BlueprintName = "ExampleIOS"
-               ReferencedContainer = "container:SwiftMark.xcodeproj">
+               BlueprintIdentifier = "3F6710FC1C57BFC80041EE62"
+               BuildableName = "SampleOSX.app"
+               BlueprintName = "SampleOSX"
+               ReferencedContainer = "container:SampleOSX.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F0617DF1C4E3D7100A3DE0B"
-            BuildableName = "ExampleIOS.app"
-            BlueprintName = "ExampleIOS"
-            ReferencedContainer = "container:SwiftMark.xcodeproj">
+            BlueprintIdentifier = "3F6710FC1C57BFC80041EE62"
+            BuildableName = "SampleOSX.app"
+            BlueprintName = "SampleOSX"
+            ReferencedContainer = "container:SampleOSX.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F0617DF1C4E3D7100A3DE0B"
-            BuildableName = "ExampleIOS.app"
-            BlueprintName = "ExampleIOS"
-            ReferencedContainer = "container:SwiftMark.xcodeproj">
+            BlueprintIdentifier = "3F6710FC1C57BFC80041EE62"
+            BuildableName = "SampleOSX.app"
+            BlueprintName = "SampleOSX"
+            ReferencedContainer = "container:SampleOSX.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3F0617DF1C4E3D7100A3DE0B"
-            BuildableName = "ExampleIOS.app"
-            BlueprintName = "ExampleIOS"
-            ReferencedContainer = "container:SwiftMark.xcodeproj">
+            BlueprintIdentifier = "3F6710FC1C57BFC80041EE62"
+            BuildableName = "SampleOSX.app"
+            BlueprintName = "SampleOSX"
+            ReferencedContainer = "container:SampleOSX.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

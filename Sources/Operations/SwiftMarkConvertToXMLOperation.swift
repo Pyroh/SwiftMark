@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SwiftMarkConvertToXMLOperation: SwiftMarkOperation {
+public class SwiftMarkToXMLOperation: SwiftMarkOperation {
     public override init(text: String, options: SwiftMarkOptions = .Default) {
         super.init(text: text, options: options)
     }

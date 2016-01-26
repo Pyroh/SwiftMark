@@ -27,22 +27,6 @@ public func commonMarkToHTML(str: String, options: SwiftMarkOptions = .Default) 
 }
 
 /**
- Produce the LATEX string corresponding to the given CommonMark string.
- Using default options `SwiftMarkOptions.Default`
- 
- - throws: `SwiftMark.ParsingError` if something goes wrong.
- */
-public func commonMarkToLATEX(str: String, width: Int32 = 0, options: SwiftMarkOptions = .Default) throws -> String {
-    guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.ParsingError }
-    let buf = cmark_render_latex(ast, options.rawValue, width)
-    let buffer = String(CString: buf, encoding: NSUTF8StringEncoding)
-    cmark_node_free(ast)
-    free(buf);
-    guard let output = buffer else { throw SwiftMarkError.ParsingError }
-    return output
-}
-
-/**
  Produce the XML string corresponding to the given CommonMark string.
  Using default options `SwiftMarkOptions.Default`
  
@@ -56,6 +40,22 @@ public func commonMarkToXML(str: String, options: SwiftMarkOptions = .Default) t
     free(buf);
     ast.destroy()
     buf.destroy()
+    guard let output = buffer else { throw SwiftMarkError.ParsingError }
+    return output
+}
+
+/**
+ Produce the LATEX string corresponding to the given CommonMark string.
+ Using default options `SwiftMarkOptions.Default`
+ 
+ - throws: `SwiftMark.ParsingError` if something goes wrong.
+ */
+private func commonMarkToLATEX(str: String, width: Int32 = 0, options: SwiftMarkOptions = .Default) throws -> String {
+    guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.ParsingError }
+    let buf = cmark_render_latex(ast, options.rawValue, width)
+    let buffer = String(CString: buf, encoding: NSUTF8StringEncoding)
+    cmark_node_free(ast)
+    free(buf);
     guard let output = buffer else { throw SwiftMarkError.ParsingError }
     return output
 }

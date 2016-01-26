@@ -11,7 +11,6 @@ import Foundation
 public typealias ConversionCompleteBlock = (String) -> ()
 public typealias FailureBlock = (SwiftMarkError) -> ()
 
-/// <#Description#>
 public class SwiftMarkOperation: NSOperation {
     private let markdownText: String?
     private let fileURL: NSURL?
