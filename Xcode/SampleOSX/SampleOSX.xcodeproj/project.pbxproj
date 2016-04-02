@@ -11,24 +11,8 @@
 		3F6711031C57BFC80041EE62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6711021C57BFC80041EE62 /* ViewController.swift */; };
 		3F6711051C57BFC80041EE62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6711041C57BFC80041EE62 /* Assets.xcassets */; };
 		3F6711081C57BFC80041EE62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6711061C57BFC80041EE62 /* Main.storyboard */; };
-		3F6711131C57C05E0041EE62 /* SwiftMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6711111C57C0530041EE62 /* SwiftMark.framework */; };
-		3F6711141C57C05E0041EE62 /* SwiftMark.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6711111C57C0530041EE62 /* SwiftMark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F6711221C57C2DE0041EE62 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6711211C57C2DE0041EE62 /* WindowController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3F6711151C57C05E0041EE62 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3F6711141C57C05E0041EE62 /* SwiftMark.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F6710FD1C57BFC80041EE62 /* SampleOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,7 +21,6 @@
 		3F6711041C57BFC80041EE62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F6711071C57BFC80041EE62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F6711091C57BFC80041EE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F6711111C57C0530041EE62 /* SwiftMark.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMark.framework; path = /Users/Pyroh/Dev/Projects/SwiftMark/Xcode/build/Release/SwiftMark.framework; sourceTree = "<absolute>"; };
 		3F6711211C57C2DE0041EE62 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +29,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F6711131C57C05E0041EE62 /* SwiftMark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +74,6 @@
 				3F6710F91C57BFC80041EE62 /* Sources */,
 				3F6710FA1C57BFC80041EE62 /* Frameworks */,
 				3F6710FB1C57BFC80041EE62 /* Resources */,
-				3F6711151C57C05E0041EE62 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
