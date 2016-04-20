@@ -3,7 +3,7 @@
     "clean": true,
     "sdk": "macos",
     "source_directory": "../Xcode",
-    "swift_version": "2.1.1",
+    "swift_version": "2.2",
     "author_name": "Pierre Tacchi",
     "author_url": "pyroh.github.io",
     "module_name": "SwiftMark",
@@ -14,5 +14,6 @@
     "dash_url": "https://pyroh.github.io/docsets/SwiftMark.xml",
     "github_url": "https://github.com/Pyroh/SwiftMark",
     "skip_undocumented": true,
-    "root_url": "https://pyroh.github.io/"
+    "hide_documentation_coverage": true,
+    "root_url": "https://pyroh.github.io/docs/SwiftMark/"
 }
