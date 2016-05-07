@@ -36,3 +36,6 @@ Carthage/Build
 
 *.xcscmblueprint
 docs/
+
+*.playground/
+
