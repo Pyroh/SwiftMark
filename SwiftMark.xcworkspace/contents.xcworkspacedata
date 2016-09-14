@@ -5,6 +5,9 @@
       location = "group:Xcode/SwiftMark.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:MyPlayground.playground">
+   </FileRef>
+   <FileRef
       location = "group:Xcode/SampleOSX/SampleOSX.xcodeproj">
    </FileRef>
 </Workspace>

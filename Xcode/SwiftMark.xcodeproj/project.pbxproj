@@ -16,7 +16,6 @@
 		3F0617B71C4E3C6C00A3DE0B /* cmark_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B51C26A64500AC2FA5 /* cmark_export.h */; };
 		3F0617B81C4E3C6C00A3DE0B /* cmark_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B61C26A64500AC2FA5 /* cmark_version.h */; };
 		3F0617B91C4E3C6C00A3DE0B /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B71C26A64500AC2FA5 /* config.h */; };
-		3F0617BA1C4E3C6C00A3DE0B /* bench.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2631C26A62200AC2FA5 /* bench.h */; };
 		3F0617BB1C4E3C6C00A3DE0B /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2641C26A62200AC2FA5 /* buffer.h */; };
 		3F0617BC1C4E3C6C00A3DE0B /* chunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2651C26A62200AC2FA5 /* chunk.h */; };
 		3F0617BD1C4E3C6C00A3DE0B /* cmark_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2661C26A62200AC2FA5 /* cmark_ctype.h */; };
@@ -60,7 +59,6 @@
 		3F4B513E1C11C5130012DB9A /* SwiftMarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B513D1C11C5130012DB9A /* SwiftMarkTests.swift */; };
 		3F4B51B01C11D9D80012DB9A /* SwiftMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */; };
 		3F6178131C48C92F007FA2A0 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6178121C48C92F007FA2A0 /* NSAttributedStringExtension.swift */; };
-		3FE4F28C1C26A62200AC2FA5 /* bench.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2631C26A62200AC2FA5 /* bench.h */; };
 		3FE4F28D1C26A62200AC2FA5 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2641C26A62200AC2FA5 /* buffer.h */; };
 		3FE4F28E1C26A62200AC2FA5 /* chunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2651C26A62200AC2FA5 /* chunk.h */; };
 		3FE4F28F1C26A62200AC2FA5 /* cmark_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2661C26A62200AC2FA5 /* cmark_ctype.h */; };
@@ -129,7 +127,6 @@
 		3F5D16F81C52C8CD003C4273 /* case_fold_switch.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = case_fold_switch.inc; path = ../../Sources/cmark/case_fold_switch.inc; sourceTree = "<group>"; };
 		3F5D16FA1C52C906003C4273 /* entities.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = entities.inc; sourceTree = "<group>"; };
 		3F6178121C48C92F007FA2A0 /* NSAttributedStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSAttributedStringExtension.swift; path = ../../Sources/Extensions/NSAttributedStringExtension.swift; sourceTree = "<group>"; };
-		3FE4F2631C26A62200AC2FA5 /* bench.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bench.h; path = ../../Sources/cmark/bench.h; sourceTree = "<group>"; };
 		3FE4F2641C26A62200AC2FA5 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = ../../Sources/cmark/buffer.h; sourceTree = "<group>"; };
 		3FE4F2651C26A62200AC2FA5 /* chunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chunk.h; path = ../../Sources/cmark/chunk.h; sourceTree = "<group>"; };
 		3FE4F2661C26A62200AC2FA5 /* cmark_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark_ctype.h; path = ../../Sources/cmark/cmark_ctype.h; sourceTree = "<group>"; };
@@ -262,7 +259,6 @@
 				3FE4F2B51C26A64500AC2FA5 /* cmark_export.h */,
 				3FE4F2B61C26A64500AC2FA5 /* cmark_version.h */,
 				3FE4F2B71C26A64500AC2FA5 /* config.h */,
-				3FE4F2631C26A62200AC2FA5 /* bench.h */,
 				3FE4F2641C26A62200AC2FA5 /* buffer.h */,
 				3FE4F2651C26A62200AC2FA5 /* chunk.h */,
 				3FE4F2661C26A62200AC2FA5 /* cmark_ctype.h */,
@@ -346,7 +342,6 @@
 				3F0617C41C4E3C6C00A3DE0B /* references.h in Headers */,
 				3F0617C61C4E3C6C00A3DE0B /* scanners.h in Headers */,
 				3F0617BE1C4E3C6C00A3DE0B /* cmark.h in Headers */,
-				3F0617BA1C4E3C6C00A3DE0B /* bench.h in Headers */,
 				3F0617C01C4E3C6C00A3DE0B /* inlines.h in Headers */,
 				3F0617C51C4E3C6C00A3DE0B /* render.h in Headers */,
 				3F0617BB1C4E3C6C00A3DE0B /* buffer.h in Headers */,
@@ -371,7 +366,6 @@
 				3FE4F2B81C26A64500AC2FA5 /* cmark_export.h in Headers */,
 				3FE4F2921C26A62200AC2FA5 /* inlines.h in Headers */,
 				3FE4F2961C26A62200AC2FA5 /* references.h in Headers */,
-				3FE4F28C1C26A62200AC2FA5 /* bench.h in Headers */,
 				3FE4F28E1C26A62200AC2FA5 /* chunk.h in Headers */,
 				3FE4F2901C26A62200AC2FA5 /* cmark.h in Headers */,
 				3FE4F28D1C26A62200AC2FA5 /* buffer.h in Headers */,
@@ -449,17 +443,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Pierre TACCHI";
 				TargetAttributes = {
 					3F0E44541C4964F600E0405E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					3F4B512D1C11C5130012DB9A = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 					};
 					3F4B51371C11C5130012DB9A = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -597,7 +594,7 @@
 		3F0E445B1C4964F600E0405E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -611,6 +608,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -618,7 +616,7 @@
 		3F0E445C1C4964F600E0405E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -632,6 +630,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -650,8 +649,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -674,6 +675,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -697,8 +699,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -715,9 +719,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -728,6 +734,7 @@
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -744,6 +751,7 @@
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -753,6 +761,7 @@
 			buildSettings = {
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -768,6 +777,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 2.3;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -780,6 +790,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pyrolyse.SwiftMarkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -791,6 +802,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pyrolyse.SwiftMarkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

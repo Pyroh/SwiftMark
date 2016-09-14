@@ -62,7 +62,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
         openPanel.allowsMultipleSelection = false
         openPanel.allowedFileTypes = ["css"]
         
-        if openPanel.runModal() == NSModalResponseOK, let url = openPanel.URL, filename = url.lastPathComponent, data = NSData(contentsOfURL: url) {
+        if openPanel.runModal() == NSModalResponseOK, let url = openPanel.URL, let filename = url.lastPathComponent, let data = NSData(contentsOfURL: url) {
             self.cssString = String(data: data, encoding: NSUTF8StringEncoding)
             cssFileNameLabel.stringValue = filename
             cssFileNameLabel.hidden = false

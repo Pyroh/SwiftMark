@@ -12,7 +12,23 @@
 		3F6711051C57BFC80041EE62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6711041C57BFC80041EE62 /* Assets.xcassets */; };
 		3F6711081C57BFC80041EE62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F6711061C57BFC80041EE62 /* Main.storyboard */; };
 		3F6711221C57C2DE0041EE62 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6711211C57C2DE0041EE62 /* WindowController.swift */; };
+		3FC82B251D893B52008ABD6F /* SwiftMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC82B241D893B52008ABD6F /* SwiftMark.framework */; };
+		3FC82B261D893B52008ABD6F /* SwiftMark.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC82B241D893B52008ABD6F /* SwiftMark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3FC82B271D893B52008ABD6F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3FC82B261D893B52008ABD6F /* SwiftMark.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F6710FD1C57BFC80041EE62 /* SampleOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,8 @@
 		3F6711071C57BFC80041EE62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F6711091C57BFC80041EE62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F6711211C57C2DE0041EE62 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		3FC82B241D893B52008ABD6F /* SwiftMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC82B281D893BB9008ABD6F /* SampleOSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SampleOSX.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC82B251D893B52008ABD6F /* SwiftMark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +57,7 @@
 		3F6710F41C57BFC80041EE62 = {
 			isa = PBXGroup;
 			children = (
+				3FC82B241D893B52008ABD6F /* SwiftMark.framework */,
 				3F6710FF1C57BFC80041EE62 /* SampleOSX */,
 				3F6710FE1C57BFC80041EE62 /* Products */,
 			);
@@ -54,6 +74,7 @@
 		3F6710FF1C57BFC80041EE62 /* SampleOSX */ = {
 			isa = PBXGroup;
 			children = (
+				3FC82B281D893BB9008ABD6F /* SampleOSX.entitlements */,
 				3F6711001C57BFC80041EE62 /* AppDelegate.swift */,
 				3F6711021C57BFC80041EE62 /* ViewController.swift */,
 				3F6711211C57C2DE0041EE62 /* WindowController.swift */,
@@ -74,6 +95,7 @@
 				3F6710F91C57BFC80041EE62 /* Sources */,
 				3F6710FA1C57BFC80041EE62 /* Frameworks */,
 				3F6710FB1C57BFC80041EE62 /* Resources */,
+				3FC82B271D893B52008ABD6F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -91,11 +113,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Pierre TACCHI";
 				TargetAttributes = {
 					3F6710FC1C57BFC80041EE62 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -167,8 +195,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -211,8 +241,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -231,6 +263,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -238,11 +271,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleOSX/SampleOSX.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SampleOSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pyrolyse.SampleOSX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -250,11 +285,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SampleOSX/SampleOSX.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SampleOSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pyrolyse.SampleOSX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
