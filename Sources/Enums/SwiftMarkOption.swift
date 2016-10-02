@@ -7,7 +7,7 @@
 //
 
 /// These options are used by the *CommonMark* parser.
-public struct SwiftMarkOptions: OptionSetType {
+public struct SwiftMarkOptions: OptionSet {
     public let rawValue: Int32
     public init(rawValue: Int32) { self.rawValue = rawValue }
      /// Default options.

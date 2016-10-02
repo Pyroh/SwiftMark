@@ -11,7 +11,7 @@ import Foundation
 /// A `SwiftMarkToHTMLOperation` converts any valid *CommonMark* text to HTML. Use this class if you want to convert *CommonMark* text to HTML asynchronously.
 ///
 /// The blocks you assign to process the fetched records are executed serially on an internal queue managed by the operation. Your blocks must be capable of executing on a background thread, so any tasks that require access to the main thread must be redirected accordingly.
-public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
+open class SwiftMarkToHTMLOperation: SwiftMarkOperation {
     /**
      Returns on initialized `SwiftMarkToHTMLOperation` object ready to convert the given *CommonMark* text using given options.
      
@@ -33,7 +33,7 @@ public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToHTMLOperation` object ready to execute.
      */
-    public convenience init(text: String, options: SwiftMarkOptions = .Default, conversionCompleteBlock: ConversionCompleteBlock) {
+    public convenience init(text: String, options: SwiftMarkOptions = .Default, conversionCompleteBlock: @escaping ConversionCompleteBlock) {
         self.init(text: text, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
     }
@@ -48,7 +48,7 @@ public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToHTMLOperation` object ready to execute.
      */
-    public convenience init(text: String, options: SwiftMarkOptions = .Default, conversionCompleteBlock: ConversionCompleteBlock, failureBlock: FailureBlock) {
+    public convenience init(text: String, options: SwiftMarkOptions = .Default, conversionCompleteBlock: @escaping ConversionCompleteBlock, failureBlock: @escaping FailureBlock) {
         self.init(text: text, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
         self.failureBlock = failureBlock
@@ -63,7 +63,7 @@ public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToHTMLOperation` object ready to execute.
      */
-    public override init(url: NSURL, options: SwiftMarkOptions = .Default, encoding: UInt = NSUTF8StringEncoding) {
+    public override init(url: URL, options: SwiftMarkOptions = .Default, encoding: UInt = String.Encoding.utf8.rawValue) {
         super.init(url: url, options: options, encoding: encoding)
     }
     
@@ -77,7 +77,7 @@ public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToHTMLOperation` object ready to execute.
      */
-    public convenience init(url: NSURL, options: SwiftMarkOptions = .Default, encoding: UInt = NSUTF8StringEncoding, conversionCompleteBlock: ConversionCompleteBlock) {
+    public convenience init(url: URL, options: SwiftMarkOptions = .Default, encoding: UInt = String.Encoding.utf8.rawValue, conversionCompleteBlock: @escaping ConversionCompleteBlock) {
         self.init(url: url, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
     }
@@ -93,13 +93,13 @@ public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToHTMLOperation` object ready to execute.
      */
-    public convenience init(url: NSURL, options: SwiftMarkOptions = .Default, encoding: UInt = NSUTF8StringEncoding, conversionCompleteBlock: ConversionCompleteBlock, failureBlock: FailureBlock) {
+    public convenience init(url: URL, options: SwiftMarkOptions = .Default, encoding: UInt = String.Encoding.utf8.rawValue, conversionCompleteBlock: @escaping ConversionCompleteBlock, failureBlock: @escaping FailureBlock) {
         self.init(url: url, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
         self.failureBlock = failureBlock
     }
     
-    override func convert(commonMarkString: String) throws -> String {
+    override func convert(_ commonMarkString: String) throws -> String {
         return try commonMarkToHTML(commonMarkString, options: self.options)
     }
 }

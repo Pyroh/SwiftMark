@@ -13,17 +13,17 @@ public typealias FailureBlock = (SwiftMarkError) -> ()
  /// The `SwiftMarkOperation` class is the abstarct base class for all operation executed in order to convert *CommonMark* texts. Do not subclass or create instances of this class directly. Instead, create instances of one of its concrete subclasses.
  ///
  /// Use the properties of this class to configure the behavior of the operation object before submitting it to an operation queue or executing it directly.
-public class SwiftMarkOperation: NSOperation {
-    private let markdownText: String?
-    private let fileURL: NSURL?
-    private let encoding: UInt
+open class SwiftMarkOperation: Operation {
+    fileprivate let markdownText: String?
+    fileprivate let fileURL: URL?
+    fileprivate let encoding: UInt
     
         /// The options passed to the parser.
-    public let options: SwiftMarkOptions
+    open let options: SwiftMarkOptions
         /// The block to execute with the result of the conversion.
-    public var conversionCompleteBlock: ConversionCompleteBlock?
+    open var conversionCompleteBlock: ConversionCompleteBlock?
         /// The block to execute when an error occurs.
-    public var failureBlock: FailureBlock?
+    open var failureBlock: FailureBlock?
 
     internal init(text: String, options: SwiftMarkOptions = .Default) {
         self.markdownText = text
@@ -32,42 +32,42 @@ public class SwiftMarkOperation: NSOperation {
         self.fileURL = nil
     }
     
-    internal init(url: NSURL, options: SwiftMarkOptions = .Default, encoding: UInt = NSUTF8StringEncoding) {
+    internal init(url: URL, options: SwiftMarkOptions = .Default, encoding: UInt = String.Encoding.utf8.rawValue) {
         self.markdownText = nil
         self.options = options
         self.encoding = encoding
         self.fileURL = url
     }
     
-    override public func main() {
-        guard !cancelled else { return }
+    override open func main() {
+        guard !isCancelled else { return }
         guard let commonMarkString = try? commonMarkString() else {
-            dispatch_sync(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
-                self.failureBlock?(SwiftMarkError.FileLoadingError)
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).sync {
+                self.failureBlock?(SwiftMarkError.fileLoadingError)
             }
             return
         }
-        guard !cancelled else { return }
+        guard !isCancelled else { return }
         guard let convertedString = try? convert(commonMarkString) else {
-            dispatch_sync(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
-                self.failureBlock?(SwiftMarkError.ParsingError)
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).sync {
+                self.failureBlock?(SwiftMarkError.parsingError)
             }
             return
         }
-        dispatch_sync(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) { 
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).sync { 
             self.conversionCompleteBlock?(convertedString)
         }
     }
     
-    internal func convert(commonMarkString: String) throws -> String {
-        throw SwiftMarkError.ParsingError
+    internal func convert(_ commonMarkString: String) throws -> String {
+        throw SwiftMarkError.parsingError
     }
     
-    private func commonMarkString() throws -> String {
+    fileprivate func commonMarkString() throws -> String {
         if let commonMarkString = markdownText {
             return commonMarkString
         }
-        guard let url = fileURL else { throw SwiftMarkError.FileLoadingError }
+        guard let url = fileURL else { throw SwiftMarkError.fileLoadingError }
         return try loadCommonMarkFromURL(url, encoding: self.encoding)
     }
 }
