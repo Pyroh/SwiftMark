@@ -5,8 +5,6 @@
 [![Dash compatible](https://img.shields.io/badge/Dash-compatible-593BB1.svg)](https://kapeli.com/dash)
 ![swiftmarklogo](https://cloud.githubusercontent.com/assets/5583681/12586335/269206cc-c450-11e5-81eb-ebf8407c2c01.png)
 
-> **At this time there's no Swift 3 support. Since at least one thing may break with every new Xcode beta release I've decided to delay the Swift 3 support until GM release. You can fork the project and modify the code but I won't accept any pull request that tries to bring Swift 3's support.**
-
 ## Goals
 **Swift***Mark* is not only a wrapper of the C library cmark but it also relies on it to provide users a complete Swift [*CommonMark*](http://commonmark.org) framework.  
 This framework offers high-level API to convert any [*CommonMark*](http://commonmark.org) text to HTML, XML and soon LATEX.
