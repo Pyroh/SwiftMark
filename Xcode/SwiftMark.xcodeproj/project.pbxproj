@@ -603,7 +603,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.l65l.SwiftMarkIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pyrolyse.SwiftMarkIOS;
 				PRODUCT_NAME = SwiftMark;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -625,7 +625,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.l65l.SwiftMarkIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pyrolyse.SwiftMarkIOS;
 				PRODUCT_NAME = SwiftMark;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
