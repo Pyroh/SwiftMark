@@ -19,14 +19,15 @@ import libcmark
  
  - returns: The HTML string produced by the *CommonMark* parser.
  */
-public func commonMarkToHTML(str: String, options: SwiftMarkOptions = .Default) throws -> String {
+public func commonMarkToHTML(_ str: String, options: SwiftMarkOptions = .Default) throws -> String {
     var buffer: String?
-    str.withCString {
-        let buf = cmark_markdown_to_html($0, Int(strlen($0)), options.rawValue)
-        buffer = String(CString: buf, encoding: NSUTF8StringEncoding)
+    try str.withCString {
+        guard let buf = cmark_markdown_to_html($0, Int(strlen($0)), options.rawValue) else { throw SwiftMarkError.parsingError }
+        
+        buffer = String(validatingUTF8: buf)
         free(buf)
     }
-    guard let output = buffer else { throw SwiftMarkError.ParsingError }
+    guard let output = buffer else { throw SwiftMarkError.parsingError }
     return output
 }
 
@@ -40,32 +41,30 @@ public func commonMarkToHTML(str: String, options: SwiftMarkOptions = .Default) 
  
  - returns: The XML string produced by the *CommonMark* parser.
  */
-public func commonMarkToXML(str: String, options: SwiftMarkOptions = .Default) throws -> String {
-    guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.ParsingError }
-    let buf = cmark_render_xml(ast, options.rawValue)
-    let buffer = String(CString: buf, encoding: NSUTF8StringEncoding)
-    cmark_node_free(ast)
-    free(buf);
-    ast.destroy()
-    buf.destroy()
-    guard let output = buffer else { throw SwiftMarkError.ParsingError }
+public func commonMarkToXML(_ str: String, options: SwiftMarkOptions = .Default) throws -> String {
+    guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.parsingError }
+    defer { cmark_node_free(ast); ast.deinitialize() }
+    guard let buf = cmark_render_xml(ast, options.rawValue) else { throw SwiftMarkError.parsingError }
+    defer { free(buf); buf.deinitialize() }
+    let buffer = String(validatingUTF8: buf)
+    guard let output = buffer else { throw SwiftMarkError.parsingError }
     return output
 }
 
-private func commonMarkToLATEX(str: String, width: Int32 = 0, options: SwiftMarkOptions = .Default) throws -> String {
-    guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.ParsingError }
-    let buf = cmark_render_latex(ast, options.rawValue, width)
-    let buffer = String(CString: buf, encoding: NSUTF8StringEncoding)
-    cmark_node_free(ast)
-    free(buf);
-    guard let output = buffer else { throw SwiftMarkError.ParsingError }
+private func commonMarkToLATEX(_ str: String, width: Int32 = 0, options: SwiftMarkOptions = .Default) throws -> String {
+    guard let ast = commonMarkAST(str, options: options) else { throw SwiftMarkError.parsingError }
+    defer { cmark_node_free(ast) }
+    guard let buf = cmark_render_latex(ast, options.rawValue, width) else { throw SwiftMarkError.parsingError }
+    defer { free(buf) }
+    let buffer = String(validatingUTF8: buf)
+    guard let output = buffer else { throw SwiftMarkError.parsingError }
     return output
 }
 
  /**
  Tokenize the given *CommonMark* string using given options.
  */
-internal func commonMarkAST(str: String, options: SwiftMarkOptions = .Default) -> UnsafeMutablePointer<cmark_node>? {
+internal func commonMarkAST(_ str: String, options: SwiftMarkOptions = .Default) -> UnsafeMutablePointer<cmark_node>? {
     var ast: UnsafeMutablePointer<cmark_node>?
     str.withCString {
         ast = cmark_parse_document($0, Int(strlen($0)), options.rawValue)
@@ -78,9 +77,9 @@ internal func commonMarkAST(str: String, options: SwiftMarkOptions = .Default) -
  
  - throws: `SwiftMarkError.FileLoadingError` if something goes wrong during file access.
  */
-internal func loadCommonMarkFromURL(url: NSURL, encoding: UInt = NSUnicodeStringEncoding) throws -> String {
-    guard let data = NSData(contentsOfURL: url), str = String(data: data, encoding: encoding) else {
-        throw SwiftMarkError.FileLoadingError
+internal func loadCommonMarkFromURL(_ url: URL, encoding: String.Encoding = String.Encoding.unicode) throws -> String {
+    guard let data = try? Data(contentsOf: url), let str = String(data: data, encoding: encoding) else {
+        throw SwiftMarkError.fileLoadingError
     }
     return str
 }

@@ -21,7 +21,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
         }
     }
     
-    private let queue = NSOperationQueue()
+    private let queue = OperationQueue()
     private var cssString: String?
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
         inputTextView.font = NSFont(name: "Menlo", size: 13.0)
     }
 
-    func textDidChange(notification: NSNotification) {
+    func textDidChange(_ notification: Notification) {
         queue.cancelAllOperations()
         requestCommonMarkConversion()
     }
@@ -39,7 +39,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
         if async {
             let op = SwiftMarkToHTMLOperation(text: md)
             op.conversionCompleteBlock = { html in
-                dispatch_sync(dispatch_get_main_queue()) { [unowned self] in
+                DispatchQueue.main.sync { [unowned self] in
                     self.attributedTextView.textStorage?.setAttributedString(NSAttributedString.attributedStringFromHTML(html, withCSSString: self.cssString))
                 }
             }
@@ -55,27 +55,28 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
         }
     }
     
-    @IBAction func loadCSS(sender: AnyObject) {
+    @IBAction func loadCSS(_ sender: AnyObject) {
         let openPanel = NSOpenPanel()
         openPanel.canChooseFiles = true
         openPanel.canChooseDirectories = false
         openPanel.allowsMultipleSelection = false
         openPanel.allowedFileTypes = ["css"]
         
-        if openPanel.runModal() == NSModalResponseOK, let url = openPanel.URL, let filename = url.lastPathComponent, let data = NSData(contentsOfURL: url) {
-            self.cssString = String(data: data, encoding: NSUTF8StringEncoding)
+        if openPanel.runModal() == NSModalResponseOK, let url = openPanel.url, let data = try? Data(contentsOf: url) {
+            let filename = url.lastPathComponent
+            self.cssString = String(data: data, encoding: String.Encoding.utf8)
             cssFileNameLabel.stringValue = filename
-            cssFileNameLabel.hidden = false
-            clearCSSButton.hidden = false
+            cssFileNameLabel.isHidden = false
+            clearCSSButton.isHidden = false
             
             requestCommonMarkConversion()
         }
     }
     
-    @IBAction func clearCSS(sender: AnyObject) {
+    @IBAction func clearCSS(_ sender: AnyObject) {
         cssString = nil
-        cssFileNameLabel.hidden = true
-        clearCSSButton.hidden = true
+        cssFileNameLabel.isHidden = true
+        clearCSSButton.isHidden = true
         
         requestCommonMarkConversion()
     }

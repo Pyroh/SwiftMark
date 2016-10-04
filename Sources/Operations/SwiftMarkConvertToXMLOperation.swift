@@ -33,7 +33,7 @@ public class SwiftMarkToXMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToXMLOperation` object ready to execute.
      */
-    public convenience init(text: String, options: SwiftMarkOptions = .Default, conversionCompleteBlock: ConversionCompleteBlock) {
+    public convenience init(text: String, options: SwiftMarkOptions = .Default, conversionCompleteBlock: @escaping ConversionCompleteBlock) {
         self.init(text: text, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
     }
@@ -48,7 +48,7 @@ public class SwiftMarkToXMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToXMLOperation` object ready to execute.
      */
-    public convenience init(text: String, options: SwiftMarkOptions = .Default, conversionCompleteBlock: ConversionCompleteBlock, failureBlock: FailureBlock) {
+    public convenience init(text: String, options: SwiftMarkOptions = .Default, conversionCompleteBlock: @escaping ConversionCompleteBlock, failureBlock: @escaping FailureBlock) {
         self.init(text: text, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
         self.failureBlock = failureBlock
@@ -63,7 +63,7 @@ public class SwiftMarkToXMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToXMLOperation` object ready to execute.
      */
-    public override init(url: NSURL, options: SwiftMarkOptions = .Default, encoding: UInt = NSUTF8StringEncoding) {
+    public override init(url: URL, options: SwiftMarkOptions = .Default, encoding: String.Encoding = String.Encoding.utf8) {
         super.init(url: url, options: options, encoding: encoding)
     }
     
@@ -77,7 +77,7 @@ public class SwiftMarkToXMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToXMLOperation` object ready to execute.
      */
-    public convenience init(url: NSURL, options: SwiftMarkOptions = .Default, encoding: UInt = NSUTF8StringEncoding, conversionCompleteBlock: ConversionCompleteBlock) {
+    public convenience init(url: URL, options: SwiftMarkOptions = .Default, encoding: String.Encoding = String.Encoding.utf8, conversionCompleteBlock: @escaping ConversionCompleteBlock) {
         self.init(url: url, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
     }
@@ -93,13 +93,13 @@ public class SwiftMarkToXMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToXMLOperation` object ready to execute.
      */
-    public convenience init(url: NSURL, options: SwiftMarkOptions = .Default, encoding: UInt = NSUTF8StringEncoding, conversionCompleteBlock: ConversionCompleteBlock, failureBlock: FailureBlock) {
+    public convenience init(url: URL, options: SwiftMarkOptions = .Default, encoding: String.Encoding = String.Encoding.utf8, conversionCompleteBlock: @escaping ConversionCompleteBlock, failureBlock: @escaping FailureBlock) {
         self.init(url: url, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
         self.failureBlock = failureBlock
     }
     
-    internal override func convert(commonMarkString: String) throws -> String {
+    internal override func convert(_ commonMarkString: String) throws -> String {
         return try commonMarkToXML(commonMarkString, options: self.options)
     }
 }
