@@ -63,7 +63,7 @@ public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToHTMLOperation` object ready to execute.
      */
-    public override init(url: URL, options: SwiftMarkOptions = .Default, encoding: UInt = String.Encoding.utf8.rawValue) {
+    public override init(url: URL, options: SwiftMarkOptions = .Default, encoding: String.Encoding = String.Encoding.utf8) {
         super.init(url: url, options: options, encoding: encoding)
     }
     
@@ -77,7 +77,7 @@ public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToHTMLOperation` object ready to execute.
      */
-    public convenience init(url: URL, options: SwiftMarkOptions = .Default, encoding: UInt = String.Encoding.utf8.rawValue, conversionCompleteBlock: @escaping ConversionCompleteBlock) {
+    public convenience init(url: URL, options: SwiftMarkOptions = .Default, encoding: String.Encoding = String.Encoding.utf8, conversionCompleteBlock: @escaping ConversionCompleteBlock) {
         self.init(url: url, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
     }
@@ -93,7 +93,7 @@ public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
      
      - returns: An initialized `SwiftMarkToHTMLOperation` object ready to execute.
      */
-    public convenience init(url: URL, options: SwiftMarkOptions = .Default, encoding: UInt = String.Encoding.utf8.rawValue, conversionCompleteBlock: @escaping ConversionCompleteBlock, failureBlock: @escaping FailureBlock) {
+    public convenience init(url: URL, options: SwiftMarkOptions = .Default, encoding: String.Encoding = String.Encoding.utf8, conversionCompleteBlock: @escaping ConversionCompleteBlock, failureBlock: @escaping FailureBlock) {
         self.init(url: url, options: options)
         self.conversionCompleteBlock = conversionCompleteBlock
         self.failureBlock = failureBlock

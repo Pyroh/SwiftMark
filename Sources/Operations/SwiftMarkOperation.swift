@@ -28,11 +28,11 @@ public class SwiftMarkOperation: Operation {
     internal init(text: String, options: SwiftMarkOptions = .Default) {
         self.markdownText = text
         self.options = options
-        self.encoding = 0
+        self.encoding = String.Encoding.utf8
         self.fileURL = nil
     }
     
-    internal init(url: URL, options: SwiftMarkOptions = .Default, encoding: UInt = String.Encoding.utf8.rawValue) {
+    internal init(url: URL, options: SwiftMarkOptions = .Default, encoding: String.Encoding = String.Encoding.utf8) {
         self.markdownText = nil
         self.options = options
         self.encoding = encoding

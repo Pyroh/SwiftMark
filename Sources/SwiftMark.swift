@@ -77,8 +77,8 @@ internal func commonMarkAST(_ str: String, options: SwiftMarkOptions = .Default)
  
  - throws: `SwiftMarkError.FileLoadingError` if something goes wrong during file access.
  */
-internal func loadCommonMarkFromURL(_ url: URL, encoding: UInt = String.Encoding.unicode.rawValue) throws -> String {
-    guard let data = try? Data(contentsOf: url), let str = String(data: data, encoding: String.Encoding(rawValue: encoding)) else {
+internal func loadCommonMarkFromURL(_ url: URL, encoding: String.Encoding = String.Encoding.unicode) throws -> String {
+    guard let data = try? Data(contentsOf: url), let str = String(data: data, encoding: encoding) else {
         throw SwiftMarkError.fileLoadingError
     }
     return str
