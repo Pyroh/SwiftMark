@@ -13,10 +13,10 @@ public typealias FailureBlock = (SwiftMarkError) -> ()
  /// The `SwiftMarkOperation` class is the abstarct base class for all operation executed in order to convert *CommonMark* texts. Do not subclass or create instances of this class directly. Instead, create instances of one of its concrete subclasses.
  ///
  /// Use the properties of this class to configure the behavior of the operation object before submitting it to an operation queue or executing it directly.
-open class SwiftMarkOperation: Operation {
-    fileprivate let markdownText: String?
-    fileprivate let fileURL: URL?
-    fileprivate let encoding: UInt
+public class SwiftMarkOperation: Operation {
+    private let markdownText: String?
+    private let fileURL: URL?
+    private let encoding: String.Encoding
     
         /// The options passed to the parser.
     open let options: SwiftMarkOptions
@@ -63,7 +63,7 @@ open class SwiftMarkOperation: Operation {
         throw SwiftMarkError.parsingError
     }
     
-    fileprivate func commonMarkString() throws -> String {
+    private func commonMarkString() throws -> String {
         if let commonMarkString = markdownText {
             return commonMarkString
         }

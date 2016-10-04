@@ -11,7 +11,7 @@ import Foundation
 /// A `SwiftMarkToHTMLOperation` converts any valid *CommonMark* text to HTML. Use this class if you want to convert *CommonMark* text to HTML asynchronously.
 ///
 /// The blocks you assign to process the fetched records are executed serially on an internal queue managed by the operation. Your blocks must be capable of executing on a background thread, so any tasks that require access to the main thread must be redirected accordingly.
-open class SwiftMarkToHTMLOperation: SwiftMarkOperation {
+public class SwiftMarkToHTMLOperation: SwiftMarkOperation {
     /**
      Returns on initialized `SwiftMarkToHTMLOperation` object ready to convert the given *CommonMark* text using given options.
      

@@ -21,8 +21,8 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
         }
     }
     
-    fileprivate let queue = OperationQueue()
-    fileprivate var cssString: String?
+    private let queue = OperationQueue()
+    private var cssString: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
         requestCommonMarkConversion()
     }
     
-    fileprivate func requestCommonMarkConversion() {
+    private func requestCommonMarkConversion() {
         guard let md = inputTextView.string else { return }
         if async {
             let op = SwiftMarkToHTMLOperation(text: md)
