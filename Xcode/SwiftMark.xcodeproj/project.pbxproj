@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F0617AF1C4E3C4700A3DE0B /* SwiftMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */; };
-		3F0617B01C4E3C5500A3DE0B /* SwiftMarkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2059A01C258BE8004B84E9 /* SwiftMarkOption.swift */; };
-		3F0617B21C4E3C5500A3DE0B /* SwiftMarkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3678AA1C46379000E9ACB5 /* SwiftMarkError.swift */; };
-		3F0617B31C4E3C5B00A3DE0B /* SwiftMarkConvertToHTMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4F2BB1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift */; };
-		3F0617B41C4E3C5B00A3DE0B /* SwiftMarkConvertToXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F4901C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift */; };
-		3F0617B51C4E3C5B00A3DE0B /* SwiftMarkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3678A81C462D2C00E9ACB5 /* SwiftMarkOperation.swift */; };
+		1D7F3B2B1DB2AD63005C259E /* SwiftMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC531DB2AAA900F61ACA /* SwiftMark.swift */; };
+		1D7F3B2C1DB2AD63005C259E /* SwiftMarkConvertToHTMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC541DB2AAA900F61ACA /* SwiftMarkConvertToHTMLOperation.swift */; };
+		1D7F3B2D1DB2AD63005C259E /* SwiftMarkConvertToXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC551DB2AAA900F61ACA /* SwiftMarkConvertToXMLOperation.swift */; };
+		1D7F3B2E1DB2AD63005C259E /* SwiftMarkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC561DB2AAA900F61ACA /* SwiftMarkError.swift */; };
+		1D7F3B2F1DB2AD63005C259E /* SwiftMarkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC571DB2AAA900F61ACA /* SwiftMarkNode.swift */; };
+		1D7F3B301DB2AD63005C259E /* SwiftMarkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC581DB2AAA900F61ACA /* SwiftMarkOperation.swift */; };
+		1D7F3B311DB2AD63005C259E /* SwiftMarkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC591DB2AAA900F61ACA /* SwiftMarkOption.swift */; };
+		1D7F3B321DB2ADE2005C259E /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6178121C48C92F007FA2A0 /* NSAttributedStringExtension.swift */; };
 		3F0617B71C4E3C6C00A3DE0B /* cmark_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B51C26A64500AC2FA5 /* cmark_export.h */; };
 		3F0617B81C4E3C6C00A3DE0B /* cmark_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B61C26A64500AC2FA5 /* cmark_version.h */; };
 		3F0617B91C4E3C6C00A3DE0B /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B71C26A64500AC2FA5 /* config.h */; };
@@ -50,15 +52,9 @@
 		3F0617DA1C4E3C7100A3DE0B /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4F2831C26A62200AC2FA5 /* utf8.c */; };
 		3F0617DB1C4E3C7100A3DE0B /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4F2841C26A62200AC2FA5 /* xml.c */; };
 		3F0E44581C4964F600E0405E /* SwiftMarkIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F0E44571C4964F600E0405E /* SwiftMarkIOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F16F4911C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16F4901C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift */; };
-		3F2059A11C258BE8004B84E9 /* SwiftMarkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2059A01C258BE8004B84E9 /* SwiftMarkOption.swift */; };
-		3F3678A91C462D2C00E9ACB5 /* SwiftMarkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3678A81C462D2C00E9ACB5 /* SwiftMarkOperation.swift */; };
-		3F3678AB1C46379000E9ACB5 /* SwiftMarkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3678AA1C46379000E9ACB5 /* SwiftMarkError.swift */; };
 		3F4B51321C11C5130012DB9A /* SwiftMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4B51311C11C5130012DB9A /* SwiftMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F4B51391C11C5130012DB9A /* SwiftMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4B512E1C11C5130012DB9A /* SwiftMark.framework */; };
 		3F4B513E1C11C5130012DB9A /* SwiftMarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B513D1C11C5130012DB9A /* SwiftMarkTests.swift */; };
-		3F4B51B01C11D9D80012DB9A /* SwiftMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */; };
-		3F6178131C48C92F007FA2A0 /* NSAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6178121C48C92F007FA2A0 /* NSAttributedStringExtension.swift */; };
 		3FE4F28D1C26A62200AC2FA5 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2641C26A62200AC2FA5 /* buffer.h */; };
 		3FE4F28E1C26A62200AC2FA5 /* chunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2651C26A62200AC2FA5 /* chunk.h */; };
 		3FE4F28F1C26A62200AC2FA5 /* cmark_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2661C26A62200AC2FA5 /* cmark_ctype.h */; };
@@ -95,7 +91,6 @@
 		3FE4F2B81C26A64500AC2FA5 /* cmark_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B51C26A64500AC2FA5 /* cmark_export.h */; };
 		3FE4F2B91C26A64500AC2FA5 /* cmark_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B61C26A64500AC2FA5 /* cmark_version.h */; };
 		3FE4F2BA1C26A64500AC2FA5 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FE4F2B71C26A64500AC2FA5 /* config.h */; };
-		3FE4F2BC1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE4F2BB1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,20 +104,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D42BC531DB2AAA900F61ACA /* SwiftMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMark.swift; sourceTree = "<group>"; };
+		1D42BC541DB2AAA900F61ACA /* SwiftMarkConvertToHTMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMarkConvertToHTMLOperation.swift; sourceTree = "<group>"; };
+		1D42BC551DB2AAA900F61ACA /* SwiftMarkConvertToXMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMarkConvertToXMLOperation.swift; sourceTree = "<group>"; };
+		1D42BC561DB2AAA900F61ACA /* SwiftMarkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMarkError.swift; sourceTree = "<group>"; };
+		1D42BC571DB2AAA900F61ACA /* SwiftMarkNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMarkNode.swift; sourceTree = "<group>"; };
+		1D42BC581DB2AAA900F61ACA /* SwiftMarkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMarkOperation.swift; sourceTree = "<group>"; };
+		1D42BC591DB2AAA900F61ACA /* SwiftMarkOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMarkOption.swift; sourceTree = "<group>"; };
 		3F0E44551C4964F600E0405E /* SwiftMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0E44571C4964F600E0405E /* SwiftMarkIOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMarkIOS.h; sourceTree = "<group>"; };
 		3F0E44591C4964F600E0405E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F16F4901C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkConvertToXMLOperation.swift; path = ../../Sources/Operations/SwiftMarkConvertToXMLOperation.swift; sourceTree = "<group>"; };
-		3F2059A01C258BE8004B84E9 /* SwiftMarkOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkOption.swift; path = ../../Sources/Enums/SwiftMarkOption.swift; sourceTree = "<group>"; };
-		3F3678A81C462D2C00E9ACB5 /* SwiftMarkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkOperation.swift; path = ../../Sources/Operations/SwiftMarkOperation.swift; sourceTree = "<group>"; };
-		3F3678AA1C46379000E9ACB5 /* SwiftMarkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkError.swift; path = ../../Sources/Enums/SwiftMarkError.swift; sourceTree = "<group>"; };
 		3F4B512E1C11C5130012DB9A /* SwiftMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4B51311C11C5130012DB9A /* SwiftMark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMark.h; sourceTree = "<group>"; };
 		3F4B51331C11C5130012DB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F4B51381C11C5130012DB9A /* SwiftMarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4B513D1C11C5130012DB9A /* SwiftMarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMarkTests.swift; sourceTree = "<group>"; };
 		3F4B513F1C11C5130012DB9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMark.swift; path = ../../Sources/SwiftMark.swift; sourceTree = "<group>"; };
 		3F4B53501C1336B70012DB9A /* module.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = module.map; path = ../../Sources/module.map; sourceTree = "<group>"; };
 		3F5D16F81C52C8CD003C4273 /* case_fold_switch.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = case_fold_switch.inc; path = ../../Sources/cmark/case_fold_switch.inc; sourceTree = "<group>"; };
 		3F5D16FA1C52C906003C4273 /* entities.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; path = entities.inc; sourceTree = "<group>"; };
@@ -163,7 +160,6 @@
 		3FE4F2B51C26A64500AC2FA5 /* cmark_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark_export.h; path = ../../Sources/cmark/cmark_export.h; sourceTree = "<group>"; };
 		3FE4F2B61C26A64500AC2FA5 /* cmark_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark_version.h; path = ../../Sources/cmark/cmark_version.h; sourceTree = "<group>"; };
 		3FE4F2B71C26A64500AC2FA5 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../Sources/cmark/config.h; sourceTree = "<group>"; };
-		3FE4F2BB1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkConvertToHTMLOperation.swift; path = ../../Sources/Operations/SwiftMarkConvertToHTMLOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,15 +195,6 @@
 				3F0E44591C4964F600E0405E /* Info.plist */,
 			);
 			path = SwiftMarkIOS;
-			sourceTree = "<group>";
-		};
-		3F2059A21C258C0C004B84E9 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				3F2059A01C258BE8004B84E9 /* SwiftMarkOption.swift */,
-				3F3678AA1C46379000E9ACB5 /* SwiftMarkError.swift */,
-			);
-			name = Enums;
 			sourceTree = "<group>";
 		};
 		3F4B51241C11C5130012DB9A = {
@@ -300,10 +287,14 @@
 		3F5D17011C52D3A7003C4273 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1D42BC531DB2AAA900F61ACA /* SwiftMark.swift */,
+				1D42BC541DB2AAA900F61ACA /* SwiftMarkConvertToHTMLOperation.swift */,
+				1D42BC551DB2AAA900F61ACA /* SwiftMarkConvertToXMLOperation.swift */,
+				1D42BC561DB2AAA900F61ACA /* SwiftMarkError.swift */,
+				1D42BC571DB2AAA900F61ACA /* SwiftMarkNode.swift */,
+				1D42BC581DB2AAA900F61ACA /* SwiftMarkOperation.swift */,
+				1D42BC591DB2AAA900F61ACA /* SwiftMarkOption.swift */,
 				3F4B53521C1337B20012DB9A /* cmark */,
-				3FE4F2BD1C26C18A00AC2FA5 /* Operations */,
-				3F2059A21C258C0C004B84E9 /* Enums */,
-				3F4B51AF1C11D9D80012DB9A /* SwiftMark.swift */,
 				3F4B53501C1336B70012DB9A /* module.map */,
 			);
 			name = Common;
@@ -316,16 +307,6 @@
 				3F6178121C48C92F007FA2A0 /* NSAttributedStringExtension.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		3FE4F2BD1C26C18A00AC2FA5 /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				3FE4F2BB1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift */,
-				3F16F4901C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift */,
-				3F3678A81C462D2C00E9ACB5 /* SwiftMarkOperation.swift */,
-			);
-			name = Operations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -515,9 +496,7 @@
 				3F0617DB1C4E3C7100A3DE0B /* xml.c in Sources */,
 				3F0617D81C4E3C7100A3DE0B /* render.c in Sources */,
 				3F0617CD1C4E3C7100A3DE0B /* houdini_href_e.c in Sources */,
-				3F0617B21C4E3C5500A3DE0B /* SwiftMarkError.swift in Sources */,
 				3F0617C91C4E3C7100A3DE0B /* buffer.c in Sources */,
-				3F0617B51C4E3C5B00A3DE0B /* SwiftMarkOperation.swift in Sources */,
 				3F0617CA1C4E3C7100A3DE0B /* cmark_ctype.c in Sources */,
 				3F0617D11C4E3C7100A3DE0B /* inlines.c in Sources */,
 				3F0617D21C4E3C7100A3DE0B /* iterator.c in Sources */,
@@ -526,14 +505,10 @@
 				3F0617CF1C4E3C7100A3DE0B /* houdini_html_u.c in Sources */,
 				3F0617D91C4E3C7100A3DE0B /* scanners.c in Sources */,
 				3F0617D71C4E3C7100A3DE0B /* references.c in Sources */,
-				3F0617AF1C4E3C4700A3DE0B /* SwiftMark.swift in Sources */,
 				3F0617D31C4E3C7100A3DE0B /* latex.c in Sources */,
 				3F0617CE1C4E3C7100A3DE0B /* houdini_html_e.c in Sources */,
-				3F0617B01C4E3C5500A3DE0B /* SwiftMarkOption.swift in Sources */,
 				3F0617D01C4E3C7100A3DE0B /* html.c in Sources */,
-				3F0617B31C4E3C5B00A3DE0B /* SwiftMarkConvertToHTMLOperation.swift in Sources */,
 				3F0617DA1C4E3C7100A3DE0B /* utf8.c in Sources */,
-				3F0617B41C4E3C5B00A3DE0B /* SwiftMarkConvertToXMLOperation.swift in Sources */,
 				3F0617D41C4E3C7100A3DE0B /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +517,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7F3B321DB2ADE2005C259E /* NSAttributedStringExtension.swift in Sources */,
+				1D7F3B2B1DB2AD63005C259E /* SwiftMark.swift in Sources */,
+				1D7F3B2C1DB2AD63005C259E /* SwiftMarkConvertToHTMLOperation.swift in Sources */,
+				1D7F3B2D1DB2AD63005C259E /* SwiftMarkConvertToXMLOperation.swift in Sources */,
+				1D7F3B2E1DB2AD63005C259E /* SwiftMarkError.swift in Sources */,
+				1D7F3B2F1DB2AD63005C259E /* SwiftMarkNode.swift in Sources */,
+				1D7F3B301DB2AD63005C259E /* SwiftMarkOperation.swift in Sources */,
+				1D7F3B311DB2AD63005C259E /* SwiftMarkOption.swift in Sources */,
 				3FE4F29D1C26A62200AC2FA5 /* cmark.c in Sources */,
 				3FE4F29F1C26A62200AC2FA5 /* houdini_href_e.c in Sources */,
 				3FE4F2A71C26A62200AC2FA5 /* man.c in Sources */,
@@ -551,18 +534,11 @@
 				3FE4F2AA1C26A62200AC2FA5 /* render.c in Sources */,
 				3FE4F2A41C26A62200AC2FA5 /* iterator.c in Sources */,
 				3FE4F2A61C26A62200AC2FA5 /* main.c in Sources */,
-				3F2059A11C258BE8004B84E9 /* SwiftMarkOption.swift in Sources */,
 				3FE4F2A51C26A62200AC2FA5 /* latex.c in Sources */,
 				3FE4F2AD1C26A62200AC2FA5 /* xml.c in Sources */,
-				3F3678AB1C46379000E9ACB5 /* SwiftMarkError.swift in Sources */,
 				3FE4F2A01C26A62200AC2FA5 /* houdini_html_e.c in Sources */,
-				3F6178131C48C92F007FA2A0 /* NSAttributedStringExtension.swift in Sources */,
-				3F16F4911C28B24A00BC9171 /* SwiftMarkConvertToXMLOperation.swift in Sources */,
 				3FE4F2AC1C26A62200AC2FA5 /* utf8.c in Sources */,
-				3FE4F2BC1C26C18100AC2FA5 /* SwiftMarkConvertToHTMLOperation.swift in Sources */,
 				3FE4F2AB1C26A62200AC2FA5 /* scanners.c in Sources */,
-				3F4B51B01C11D9D80012DB9A /* SwiftMark.swift in Sources */,
-				3F3678A91C462D2C00E9ACB5 /* SwiftMarkOperation.swift in Sources */,
 				3FE4F2A21C26A62200AC2FA5 /* html.c in Sources */,
 				3FE4F2A81C26A62200AC2FA5 /* node.c in Sources */,
 				3FE4F2A31C26A62200AC2FA5 /* inlines.c in Sources */,
@@ -786,6 +762,7 @@
 		3F4B51461C11C5130012DB9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftMarkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -798,6 +775,7 @@
 		3F4B51471C11C5130012DB9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SwiftMarkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
