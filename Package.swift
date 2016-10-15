@@ -10,6 +10,6 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftMark",
-    targets: [ Target(name: "SwiftMark", dependencies: ["cmark"])],
+    targets: [ Target(name: "SwiftMark", dependencies: ["libcmark"])],
     exclude: ["SwiftMark.xworkspace", "README.md", "LICENCE", "Xcode", "Documentation", "Sources/Classes"]
 )
