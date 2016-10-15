@@ -1,5 +1,5 @@
 module libcmark [system] {
-    header "cmark/include/node.h"
-    header "cmark/include/cmark.h"
+    header "libcmark/include/node.h"
+    header "libcmark/include/cmark.h"
     export *
 }
