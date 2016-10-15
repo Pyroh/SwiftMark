@@ -9,5 +9,6 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftMark"
+    name: "SwiftMark",
+    exclude: ["SwiftMark.xworkspace", "README.md", "LICENCE", "Xcode", "Documentation", "Sources/Classes"]
 )
