@@ -15,7 +15,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
     @IBOutlet weak var cssFileNameLabel: NSTextField!
     @IBOutlet weak var clearCSSButton: NSButton!
     
-    internal dynamic var async: Bool = true {
+    @objc internal dynamic var async: Bool = true {
         didSet {
             requestCommonMarkConversion()
         }
@@ -35,7 +35,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
     }
     
     private func requestCommonMarkConversion() {
-        guard let md = inputTextView.string else { return }
+        let md = inputTextView.string
         if async {
             let op = SwiftMarkToHTMLOperation(text: md)
             op.conversionCompleteBlock = { html in
@@ -62,7 +62,7 @@ class ViewController: NSViewController, NSTextViewDelegate, NSTextDelegate {
         openPanel.allowsMultipleSelection = false
         openPanel.allowedFileTypes = ["css"]
         
-        if openPanel.runModal() == NSModalResponseOK, let url = openPanel.url, let data = try? Data(contentsOf: url) {
+        if openPanel.runModal() == NSApplication.ModalResponse.OK, let url = openPanel.url, let data = try? Data(contentsOf: url) {
             let filename = url.lastPathComponent
             self.cssString = String(data: data, encoding: String.Encoding.utf8)
             cssFileNameLabel.stringValue = filename
