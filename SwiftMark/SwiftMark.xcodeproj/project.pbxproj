@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0482BE872021202C003ABA91 /* SwiftMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0482BE7D2021202C003ABA91 /* SwiftMark.framework */; };
+		0482BE8C2021202C003ABA91 /* SwiftMarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BE8B2021202C003ABA91 /* SwiftMarkTests.swift */; };
+		0482BE8E2021202C003ABA91 /* SwiftMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BE802021202C003ABA91 /* SwiftMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0482BEA32021206D003ABA91 /* chunk.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BE9A2021206C003ABA91 /* chunk.h */; };
+		0482BEA42021206D003ABA91 /* cmark_export.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BE9B2021206D003ABA91 /* cmark_export.h */; };
+		0482BEA52021206D003ABA91 /* cmark_ctype.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BE9C2021206D003ABA91 /* cmark_ctype.h */; };
+		0482BEA62021206D003ABA91 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BE9D2021206D003ABA91 /* buffer.h */; };
+		0482BEA72021206D003ABA91 /* cmark.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BE9E2021206D003ABA91 /* cmark.h */; };
+		0482BEA82021206D003ABA91 /* libcmark.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BE9F2021206D003ABA91 /* libcmark.h */; };
+		0482BEA92021206D003ABA91 /* node.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEA02021206D003ABA91 /* node.h */; };
+		0482BEAA2021206D003ABA91 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEA12021206D003ABA91 /* config.h */; };
+		0482BEAB2021206D003ABA91 /* cmark_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEA22021206D003ABA91 /* cmark_version.h */; };
+		0482BECA20212098003ABA91 /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEAC20212095003ABA91 /* parser.h */; };
+		0482BECB20212098003ABA91 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEAD20212095003ABA91 /* buffer.c */; };
+		0482BECC20212098003ABA91 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEAE20212095003ABA91 /* html.c */; };
+		0482BECD20212098003ABA91 /* utf8.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEAF20212095003ABA91 /* utf8.h */; };
+		0482BECE20212098003ABA91 /* cmark_ctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEB020212095003ABA91 /* cmark_ctype.c */; };
+		0482BECF20212098003ABA91 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEB120212096003ABA91 /* render.c */; };
+		0482BED020212098003ABA91 /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEB220212096003ABA91 /* latex.c */; };
+		0482BED120212098003ABA91 /* inlines.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEB320212096003ABA91 /* inlines.c */; };
+		0482BED220212098003ABA91 /* inlines.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEB420212096003ABA91 /* inlines.h */; };
+		0482BED320212098003ABA91 /* houdini.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEB520212096003ABA91 /* houdini.h */; };
+		0482BED420212098003ABA91 /* cmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEB620212096003ABA91 /* cmark.c */; };
+		0482BED520212098003ABA91 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEB720212096003ABA91 /* xml.c */; };
+		0482BED620212098003ABA91 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEB820212096003ABA91 /* blocks.c */; };
+		0482BED720212098003ABA91 /* render.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEB920212096003ABA91 /* render.h */; };
+		0482BED820212098003ABA91 /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEBA20212096003ABA91 /* iterator.c */; };
+		0482BED920212098003ABA91 /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEBB20212096003ABA91 /* houdini_html_e.c */; };
+		0482BEDA20212098003ABA91 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEBC20212096003ABA91 /* utf8.c */; };
+		0482BEDB20212098003ABA91 /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEBD20212096003ABA91 /* iterator.h */; };
+		0482BEDC20212098003ABA91 /* scanners.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEBE20212097003ABA91 /* scanners.h */; };
+		0482BEDD20212098003ABA91 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEBF20212097003ABA91 /* commonmark.c */; };
+		0482BEDE20212098003ABA91 /* case_fold_switch.inc in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC020212097003ABA91 /* case_fold_switch.inc */; };
+		0482BEDF20212098003ABA91 /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC120212097003ABA91 /* man.c */; };
+		0482BEE020212098003ABA91 /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC220212097003ABA91 /* references.c */; };
+		0482BEE120212098003ABA91 /* references.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEC320212097003ABA91 /* references.h */; };
+		0482BEE220212098003ABA91 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC420212097003ABA91 /* scanners.c */; };
+		0482BEE320212098003ABA91 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 0482BEC520212097003ABA91 /* COPYING */; };
+		0482BEE420212098003ABA91 /* entities.inc in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC620212097003ABA91 /* entities.inc */; };
+		0482BEE520212098003ABA91 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC720212097003ABA91 /* houdini_href_e.c */; };
+		0482BEE620212098003ABA91 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC820212098003ABA91 /* houdini_html_u.c */; };
+		0482BEE720212098003ABA91 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC920212098003ABA91 /* node.c */; };
+		0482BEF0202120B1003ABA91 /* SwiftMarkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEE9202120B1003ABA91 /* SwiftMarkError.swift */; };
+		0482BEF1202120B2003ABA91 /* SwiftMarkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEEA202120B1003ABA91 /* SwiftMarkOperation.swift */; };
+		0482BEF2202120B2003ABA91 /* SwiftMarkConvertToHTMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEEB202120B1003ABA91 /* SwiftMarkConvertToHTMLOperation.swift */; };
+		0482BEF3202120B2003ABA91 /* SwiftMarkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEEC202120B1003ABA91 /* SwiftMarkNode.swift */; };
+		0482BEF4202120B2003ABA91 /* SwiftMarkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEED202120B1003ABA91 /* SwiftMarkOption.swift */; };
+		0482BEF5202120B2003ABA91 /* SwiftMarkConvertToXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEEE202120B1003ABA91 /* SwiftMarkConvertToXMLOperation.swift */; };
+		0482BEF6202120B2003ABA91 /* SwiftMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEEF202120B1003ABA91 /* SwiftMark.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0482BE882021202C003ABA91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0482BE742021202C003ABA91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0482BE7C2021202C003ABA91;
+			remoteInfo = SwiftMark;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0482BE7D2021202C003ABA91 /* SwiftMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0482BE802021202C003ABA91 /* SwiftMark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftMark.h; sourceTree = "<group>"; };
+		0482BE812021202C003ABA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0482BE862021202C003ABA91 /* SwiftMarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0482BE8B2021202C003ABA91 /* SwiftMarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMarkTests.swift; sourceTree = "<group>"; };
+		0482BE8D2021202C003ABA91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0482BE9A2021206C003ABA91 /* chunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = chunk.h; path = ../../../../Sources/libcmark/include/chunk.h; sourceTree = "<group>"; };
+		0482BE9B2021206D003ABA91 /* cmark_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark_export.h; path = ../../../../Sources/libcmark/include/cmark_export.h; sourceTree = "<group>"; };
+		0482BE9C2021206D003ABA91 /* cmark_ctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark_ctype.h; path = ../../../../Sources/libcmark/include/cmark_ctype.h; sourceTree = "<group>"; };
+		0482BE9D2021206D003ABA91 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = ../../../../Sources/libcmark/include/buffer.h; sourceTree = "<group>"; };
+		0482BE9E2021206D003ABA91 /* cmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark.h; path = ../../../../Sources/libcmark/include/cmark.h; sourceTree = "<group>"; };
+		0482BE9F2021206D003ABA91 /* libcmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libcmark.h; path = ../../../../Sources/libcmark/include/libcmark.h; sourceTree = "<group>"; };
+		0482BEA02021206D003ABA91 /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = node.h; path = ../../../../Sources/libcmark/include/node.h; sourceTree = "<group>"; };
+		0482BEA12021206D003ABA91 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../../../Sources/libcmark/include/config.h; sourceTree = "<group>"; };
+		0482BEA22021206D003ABA91 /* cmark_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cmark_version.h; path = ../../../../Sources/libcmark/include/cmark_version.h; sourceTree = "<group>"; };
+		0482BEAC20212095003ABA91 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = parser.h; path = ../../../Sources/libcmark/parser.h; sourceTree = "<group>"; };
+		0482BEAD20212095003ABA91 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = ../../../Sources/libcmark/buffer.c; sourceTree = "<group>"; };
+		0482BEAE20212095003ABA91 /* html.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = html.c; path = ../../../Sources/libcmark/html.c; sourceTree = "<group>"; };
+		0482BEAF20212095003ABA91 /* utf8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utf8.h; path = ../../../Sources/libcmark/utf8.h; sourceTree = "<group>"; };
+		0482BEB020212095003ABA91 /* cmark_ctype.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cmark_ctype.c; path = ../../../Sources/libcmark/cmark_ctype.c; sourceTree = "<group>"; };
+		0482BEB120212096003ABA91 /* render.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = render.c; path = ../../../Sources/libcmark/render.c; sourceTree = "<group>"; };
+		0482BEB220212096003ABA91 /* latex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = latex.c; path = ../../../Sources/libcmark/latex.c; sourceTree = "<group>"; };
+		0482BEB320212096003ABA91 /* inlines.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = inlines.c; path = ../../../Sources/libcmark/inlines.c; sourceTree = "<group>"; };
+		0482BEB420212096003ABA91 /* inlines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inlines.h; path = ../../../Sources/libcmark/inlines.h; sourceTree = "<group>"; };
+		0482BEB520212096003ABA91 /* houdini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = houdini.h; path = ../../../Sources/libcmark/houdini.h; sourceTree = "<group>"; };
+		0482BEB620212096003ABA91 /* cmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cmark.c; path = ../../../Sources/libcmark/cmark.c; sourceTree = "<group>"; };
+		0482BEB720212096003ABA91 /* xml.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xml.c; path = ../../../Sources/libcmark/xml.c; sourceTree = "<group>"; };
+		0482BEB820212096003ABA91 /* blocks.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = blocks.c; path = ../../../Sources/libcmark/blocks.c; sourceTree = "<group>"; };
+		0482BEB920212096003ABA91 /* render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = render.h; path = ../../../Sources/libcmark/render.h; sourceTree = "<group>"; };
+		0482BEBA20212096003ABA91 /* iterator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = iterator.c; path = ../../../Sources/libcmark/iterator.c; sourceTree = "<group>"; };
+		0482BEBB20212096003ABA91 /* houdini_html_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = houdini_html_e.c; path = ../../../Sources/libcmark/houdini_html_e.c; sourceTree = "<group>"; };
+		0482BEBC20212096003ABA91 /* utf8.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utf8.c; path = ../../../Sources/libcmark/utf8.c; sourceTree = "<group>"; };
+		0482BEBD20212096003ABA91 /* iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iterator.h; path = ../../../Sources/libcmark/iterator.h; sourceTree = "<group>"; };
+		0482BEBE20212097003ABA91 /* scanners.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = scanners.h; path = ../../../Sources/libcmark/scanners.h; sourceTree = "<group>"; };
+		0482BEBF20212097003ABA91 /* commonmark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = commonmark.c; path = ../../../Sources/libcmark/commonmark.c; sourceTree = "<group>"; };
+		0482BEC020212097003ABA91 /* case_fold_switch.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = case_fold_switch.inc; path = ../../../Sources/libcmark/case_fold_switch.inc; sourceTree = "<group>"; };
+		0482BEC120212097003ABA91 /* man.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = man.c; path = ../../../Sources/libcmark/man.c; sourceTree = "<group>"; };
+		0482BEC220212097003ABA91 /* references.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = references.c; path = ../../../Sources/libcmark/references.c; sourceTree = "<group>"; };
+		0482BEC320212097003ABA91 /* references.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = references.h; path = ../../../Sources/libcmark/references.h; sourceTree = "<group>"; };
+		0482BEC420212097003ABA91 /* scanners.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = scanners.c; path = ../../../Sources/libcmark/scanners.c; sourceTree = "<group>"; };
+		0482BEC520212097003ABA91 /* COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = COPYING; path = ../../../Sources/libcmark/COPYING; sourceTree = "<group>"; };
+		0482BEC620212097003ABA91 /* entities.inc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = entities.inc; path = ../../../Sources/libcmark/entities.inc; sourceTree = "<group>"; };
+		0482BEC720212097003ABA91 /* houdini_href_e.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = houdini_href_e.c; path = ../../../Sources/libcmark/houdini_href_e.c; sourceTree = "<group>"; };
+		0482BEC820212098003ABA91 /* houdini_html_u.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = houdini_html_u.c; path = ../../../Sources/libcmark/houdini_html_u.c; sourceTree = "<group>"; };
+		0482BEC920212098003ABA91 /* node.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = node.c; path = ../../../Sources/libcmark/node.c; sourceTree = "<group>"; };
+		0482BEE9202120B1003ABA91 /* SwiftMarkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkError.swift; path = ../../../Sources/SwiftMark/SwiftMarkError.swift; sourceTree = "<group>"; };
+		0482BEEA202120B1003ABA91 /* SwiftMarkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkOperation.swift; path = ../../../Sources/SwiftMark/SwiftMarkOperation.swift; sourceTree = "<group>"; };
+		0482BEEB202120B1003ABA91 /* SwiftMarkConvertToHTMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkConvertToHTMLOperation.swift; path = ../../../Sources/SwiftMark/SwiftMarkConvertToHTMLOperation.swift; sourceTree = "<group>"; };
+		0482BEEC202120B1003ABA91 /* SwiftMarkNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkNode.swift; path = ../../../Sources/SwiftMark/SwiftMarkNode.swift; sourceTree = "<group>"; };
+		0482BEED202120B1003ABA91 /* SwiftMarkOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkOption.swift; path = ../../../Sources/SwiftMark/SwiftMarkOption.swift; sourceTree = "<group>"; };
+		0482BEEE202120B1003ABA91 /* SwiftMarkConvertToXMLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMarkConvertToXMLOperation.swift; path = ../../../Sources/SwiftMark/SwiftMarkConvertToXMLOperation.swift; sourceTree = "<group>"; };
+		0482BEEF202120B1003ABA91 /* SwiftMark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMark.swift; path = ../../../Sources/SwiftMark/SwiftMark.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0482BE792021202C003ABA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482BE832021202C003ABA91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482BE872021202C003ABA91 /* SwiftMark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0482BE732021202C003ABA91 = {
+			isa = PBXGroup;
+			children = (
+				0482BE9720212040003ABA91 /* Sources */,
+				0482BE7F2021202C003ABA91 /* SwiftMark */,
+				0482BE8A2021202C003ABA91 /* SwiftMarkTests */,
+				0482BE7E2021202C003ABA91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0482BE7E2021202C003ABA91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0482BE7D2021202C003ABA91 /* SwiftMark.framework */,
+				0482BE862021202C003ABA91 /* SwiftMarkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0482BE7F2021202C003ABA91 /* SwiftMark */ = {
+			isa = PBXGroup;
+			children = (
+				0482BE802021202C003ABA91 /* SwiftMark.h */,
+				0482BE812021202C003ABA91 /* Info.plist */,
+			);
+			path = SwiftMark;
+			sourceTree = "<group>";
+		};
+		0482BE8A2021202C003ABA91 /* SwiftMarkTests */ = {
+			isa = PBXGroup;
+			children = (
+				0482BE8B2021202C003ABA91 /* SwiftMarkTests.swift */,
+				0482BE8D2021202C003ABA91 /* Info.plist */,
+			);
+			path = SwiftMarkTests;
+			sourceTree = "<group>";
+		};
+		0482BE9720212040003ABA91 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0482BEE82021209D003ABA91 /* Classes */,
+				0482BE9820212047003ABA91 /* libcmark */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0482BE9820212047003ABA91 /* libcmark */ = {
+			isa = PBXGroup;
+			children = (
+				0482BEB820212096003ABA91 /* blocks.c */,
+				0482BEAD20212095003ABA91 /* buffer.c */,
+				0482BEC020212097003ABA91 /* case_fold_switch.inc */,
+				0482BEB020212095003ABA91 /* cmark_ctype.c */,
+				0482BEB620212096003ABA91 /* cmark.c */,
+				0482BEBF20212097003ABA91 /* commonmark.c */,
+				0482BEC520212097003ABA91 /* COPYING */,
+				0482BEC620212097003ABA91 /* entities.inc */,
+				0482BEC720212097003ABA91 /* houdini_href_e.c */,
+				0482BEBB20212096003ABA91 /* houdini_html_e.c */,
+				0482BEC820212098003ABA91 /* houdini_html_u.c */,
+				0482BEB520212096003ABA91 /* houdini.h */,
+				0482BEAE20212095003ABA91 /* html.c */,
+				0482BEB320212096003ABA91 /* inlines.c */,
+				0482BEB420212096003ABA91 /* inlines.h */,
+				0482BEBA20212096003ABA91 /* iterator.c */,
+				0482BEBD20212096003ABA91 /* iterator.h */,
+				0482BEB220212096003ABA91 /* latex.c */,
+				0482BEC120212097003ABA91 /* man.c */,
+				0482BEC920212098003ABA91 /* node.c */,
+				0482BEAC20212095003ABA91 /* parser.h */,
+				0482BEC220212097003ABA91 /* references.c */,
+				0482BEC320212097003ABA91 /* references.h */,
+				0482BEB120212096003ABA91 /* render.c */,
+				0482BEB920212096003ABA91 /* render.h */,
+				0482BEC420212097003ABA91 /* scanners.c */,
+				0482BEBE20212097003ABA91 /* scanners.h */,
+				0482BEBC20212096003ABA91 /* utf8.c */,
+				0482BEAF20212095003ABA91 /* utf8.h */,
+				0482BEB720212096003ABA91 /* xml.c */,
+				0482BE992021204F003ABA91 /* include */,
+			);
+			path = libcmark;
+			sourceTree = "<group>";
+		};
+		0482BE992021204F003ABA91 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				0482BE9D2021206D003ABA91 /* buffer.h */,
+				0482BE9A2021206C003ABA91 /* chunk.h */,
+				0482BE9C2021206D003ABA91 /* cmark_ctype.h */,
+				0482BE9B2021206D003ABA91 /* cmark_export.h */,
+				0482BEA22021206D003ABA91 /* cmark_version.h */,
+				0482BE9E2021206D003ABA91 /* cmark.h */,
+				0482BEA12021206D003ABA91 /* config.h */,
+				0482BE9F2021206D003ABA91 /* libcmark.h */,
+				0482BEA02021206D003ABA91 /* node.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		0482BEE82021209D003ABA91 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0482BEEF202120B1003ABA91 /* SwiftMark.swift */,
+				0482BEEB202120B1003ABA91 /* SwiftMarkConvertToHTMLOperation.swift */,
+				0482BEEE202120B1003ABA91 /* SwiftMarkConvertToXMLOperation.swift */,
+				0482BEE9202120B1003ABA91 /* SwiftMarkError.swift */,
+				0482BEEC202120B1003ABA91 /* SwiftMarkNode.swift */,
+				0482BEEA202120B1003ABA91 /* SwiftMarkOperation.swift */,
+				0482BEED202120B1003ABA91 /* SwiftMarkOption.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0482BE7A2021202C003ABA91 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482BECA20212098003ABA91 /* parser.h in Headers */,
+				0482BEA82021206D003ABA91 /* libcmark.h in Headers */,
+				0482BEA42021206D003ABA91 /* cmark_export.h in Headers */,
+				0482BED220212098003ABA91 /* inlines.h in Headers */,
+				0482BEE120212098003ABA91 /* references.h in Headers */,
+				0482BEAA2021206D003ABA91 /* config.h in Headers */,
+				0482BEA92021206D003ABA91 /* node.h in Headers */,
+				0482BEA52021206D003ABA91 /* cmark_ctype.h in Headers */,
+				0482BEA32021206D003ABA91 /* chunk.h in Headers */,
+				0482BED720212098003ABA91 /* render.h in Headers */,
+				0482BECD20212098003ABA91 /* utf8.h in Headers */,
+				0482BEDB20212098003ABA91 /* iterator.h in Headers */,
+				0482BEA72021206D003ABA91 /* cmark.h in Headers */,
+				0482BEA62021206D003ABA91 /* buffer.h in Headers */,
+				0482BEAB2021206D003ABA91 /* cmark_version.h in Headers */,
+				0482BE8E2021202C003ABA91 /* SwiftMark.h in Headers */,
+				0482BEDC20212098003ABA91 /* scanners.h in Headers */,
+				0482BED320212098003ABA91 /* houdini.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0482BE7C2021202C003ABA91 /* SwiftMark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0482BE912021202C003ABA91 /* Build configuration list for PBXNativeTarget "SwiftMark" */;
+			buildPhases = (
+				0482BE782021202C003ABA91 /* Sources */,
+				0482BE792021202C003ABA91 /* Frameworks */,
+				0482BE7A2021202C003ABA91 /* Headers */,
+				0482BE7B2021202C003ABA91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftMark;
+			productName = SwiftMark;
+			productReference = 0482BE7D2021202C003ABA91 /* SwiftMark.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0482BE852021202C003ABA91 /* SwiftMarkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0482BE942021202C003ABA91 /* Build configuration list for PBXNativeTarget "SwiftMarkTests" */;
+			buildPhases = (
+				0482BE822021202C003ABA91 /* Sources */,
+				0482BE832021202C003ABA91 /* Frameworks */,
+				0482BE842021202C003ABA91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0482BE892021202C003ABA91 /* PBXTargetDependency */,
+			);
+			name = SwiftMarkTests;
+			productName = SwiftMarkTests;
+			productReference = 0482BE862021202C003ABA91 /* SwiftMarkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0482BE742021202C003ABA91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Jack Tihon";
+				TargetAttributes = {
+					0482BE7C2021202C003ABA91 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+					0482BE852021202C003ABA91 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0482BE772021202C003ABA91 /* Build configuration list for PBXProject "SwiftMark" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0482BE732021202C003ABA91;
+			productRefGroup = 0482BE7E2021202C003ABA91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0482BE7C2021202C003ABA91 /* SwiftMark */,
+				0482BE852021202C003ABA91 /* SwiftMarkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0482BE7B2021202C003ABA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482BEE320212098003ABA91 /* COPYING in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482BE842021202C003ABA91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0482BE782021202C003ABA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482BEDD20212098003ABA91 /* commonmark.c in Sources */,
+				0482BED620212098003ABA91 /* blocks.c in Sources */,
+				0482BEF2202120B2003ABA91 /* SwiftMarkConvertToHTMLOperation.swift in Sources */,
+				0482BEF4202120B2003ABA91 /* SwiftMarkOption.swift in Sources */,
+				0482BECE20212098003ABA91 /* cmark_ctype.c in Sources */,
+				0482BEE420212098003ABA91 /* entities.inc in Sources */,
+				0482BEDF20212098003ABA91 /* man.c in Sources */,
+				0482BEF0202120B1003ABA91 /* SwiftMarkError.swift in Sources */,
+				0482BED920212098003ABA91 /* houdini_html_e.c in Sources */,
+				0482BEE520212098003ABA91 /* houdini_href_e.c in Sources */,
+				0482BEF6202120B2003ABA91 /* SwiftMark.swift in Sources */,
+				0482BECF20212098003ABA91 /* render.c in Sources */,
+				0482BEF5202120B2003ABA91 /* SwiftMarkConvertToXMLOperation.swift in Sources */,
+				0482BED420212098003ABA91 /* cmark.c in Sources */,
+				0482BEE620212098003ABA91 /* houdini_html_u.c in Sources */,
+				0482BEE220212098003ABA91 /* scanners.c in Sources */,
+				0482BED120212098003ABA91 /* inlines.c in Sources */,
+				0482BEDE20212098003ABA91 /* case_fold_switch.inc in Sources */,
+				0482BEDA20212098003ABA91 /* utf8.c in Sources */,
+				0482BECC20212098003ABA91 /* html.c in Sources */,
+				0482BECB20212098003ABA91 /* buffer.c in Sources */,
+				0482BED820212098003ABA91 /* iterator.c in Sources */,
+				0482BED020212098003ABA91 /* latex.c in Sources */,
+				0482BED520212098003ABA91 /* xml.c in Sources */,
+				0482BEE020212098003ABA91 /* references.c in Sources */,
+				0482BEE720212098003ABA91 /* node.c in Sources */,
+				0482BEF1202120B2003ABA91 /* SwiftMarkOperation.swift in Sources */,
+				0482BEF3202120B2003ABA91 /* SwiftMarkNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0482BE822021202C003ABA91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0482BE8C2021202C003ABA91 /* SwiftMarkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0482BE892021202C003ABA91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0482BE7C2021202C003ABA91 /* SwiftMark */;
+			targetProxy = 0482BE882021202C003ABA91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0482BE8F2021202C003ABA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0482BE902021202C003ABA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0482BE922021202C003ABA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftMark/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.saltedfish.SwiftMark;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0482BE932021202C003ABA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftMark/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.saltedfish.SwiftMark;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0482BE952021202C003ABA91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftMarkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.saltedfish.SwiftMarkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0482BE962021202C003ABA91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SwiftMarkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.saltedfish.SwiftMarkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0482BE772021202C003ABA91 /* Build configuration list for PBXProject "SwiftMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482BE8F2021202C003ABA91 /* Debug */,
+				0482BE902021202C003ABA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0482BE912021202C003ABA91 /* Build configuration list for PBXNativeTarget "SwiftMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482BE922021202C003ABA91 /* Debug */,
+				0482BE932021202C003ABA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0482BE942021202C003ABA91 /* Build configuration list for PBXNativeTarget "SwiftMarkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0482BE952021202C003ABA91 /* Debug */,
+				0482BE962021202C003ABA91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0482BE742021202C003ABA91 /* Project object */;
+}
