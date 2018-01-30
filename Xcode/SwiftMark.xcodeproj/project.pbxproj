@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04587245201ABEC5000D4EB9 /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B471DB2B6A4005C259E /* blocks.c */; };
+		04587246201ABEC5000D4EB9 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B481DB2B6A4005C259E /* buffer.c */; };
+		04587247201ABEC5000D4EB9 /* cmark_ctype.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B4A1DB2B6A4005C259E /* cmark_ctype.c */; };
+		04587248201ABEC5000D4EB9 /* cmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B4B1DB2B6A4005C259E /* cmark.c */; };
+		04587249201ABEC5000D4EB9 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B4C1DB2B6A4005C259E /* commonmark.c */; };
+		0458724A201ABEC5000D4EB9 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B4E1DB2B6A4005C259E /* houdini_href_e.c */; };
+		0458724B201ABEC5000D4EB9 /* houdini_html_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B4F1DB2B6A4005C259E /* houdini_html_e.c */; };
+		0458724C201ABEC5000D4EB9 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B501DB2B6A4005C259E /* houdini_html_u.c */; };
+		0458724D201ABEC5000D4EB9 /* html.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B521DB2B6A4005C259E /* html.c */; };
+		0458724E201ABEC5000D4EB9 /* inlines.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B531DB2B6A4005C259E /* inlines.c */; };
+		0458724F201ABEC5000D4EB9 /* iterator.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B551DB2B6A4005C259E /* iterator.c */; };
+		04587250201ABEC5000D4EB9 /* latex.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B571DB2B6A4005C259E /* latex.c */; };
+		04587251201ABEC5000D4EB9 /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B581DB2B6A4005C259E /* man.c */; };
+		04587252201ABEC5000D4EB9 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B591DB2B6A4005C259E /* node.c */; };
+		04587253201ABEC5000D4EB9 /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B5B1DB2B6A4005C259E /* references.c */; };
+		04587254201ABEC5000D4EB9 /* render.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B5D1DB2B6A4005C259E /* render.c */; };
+		04587255201ABEC5000D4EB9 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B5F1DB2B6A4005C259E /* scanners.c */; };
+		04587256201ABEC5000D4EB9 /* utf8.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B611DB2B6A4005C259E /* utf8.c */; };
+		04587257201ABEC5000D4EB9 /* xml.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B631DB2B6A4005C259E /* xml.c */; };
+		04587258201ABEC5000D4EB9 /* SwiftMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC531DB2AAA900F61ACA /* SwiftMark.swift */; };
+		04587259201ABEC5000D4EB9 /* SwiftMarkConvertToHTMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC541DB2AAA900F61ACA /* SwiftMarkConvertToHTMLOperation.swift */; };
+		0458725A201ABEC5000D4EB9 /* SwiftMarkConvertToXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC551DB2AAA900F61ACA /* SwiftMarkConvertToXMLOperation.swift */; };
+		0458725B201ABEC5000D4EB9 /* SwiftMarkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC561DB2AAA900F61ACA /* SwiftMarkError.swift */; };
+		0458725C201ABEC5000D4EB9 /* SwiftMarkNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC571DB2AAA900F61ACA /* SwiftMarkNode.swift */; };
+		0458725D201ABEC5000D4EB9 /* SwiftMarkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC581DB2AAA900F61ACA /* SwiftMarkOperation.swift */; };
+		0458725E201ABEC5000D4EB9 /* SwiftMarkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC591DB2AAA900F61ACA /* SwiftMarkOption.swift */; };
+		0458725F201AC156000D4EB9 /* case_fold_switch.inc in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B491DB2B6A4005C259E /* case_fold_switch.inc */; };
+		04587260201AC156000D4EB9 /* entities.inc in Sources */ = {isa = PBXBuildFile; fileRef = 1D7F3B4D1DB2B6A4005C259E /* entities.inc */; };
 		1D7F3B2B1DB2AD63005C259E /* SwiftMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC531DB2AAA900F61ACA /* SwiftMark.swift */; };
 		1D7F3B2C1DB2AD63005C259E /* SwiftMarkConvertToHTMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC541DB2AAA900F61ACA /* SwiftMarkConvertToHTMLOperation.swift */; };
 		1D7F3B2D1DB2AD63005C259E /* SwiftMarkConvertToXMLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42BC551DB2AAA900F61ACA /* SwiftMarkConvertToXMLOperation.swift */; };
@@ -374,7 +402,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Pierre TACCHI";
 				TargetAttributes = {
 					3F0E44541C4964F600E0405E = {
@@ -383,7 +411,7 @@
 					};
 					3F4B512D1C11C5130012DB9A = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0920;
 					};
 					3F4B51371C11C5130012DB9A = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -440,6 +468,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0458725F201AC156000D4EB9 /* case_fold_switch.inc in Sources */,
+				04587260201AC156000D4EB9 /* entities.inc in Sources */,
+				04587245201ABEC5000D4EB9 /* blocks.c in Sources */,
+				04587246201ABEC5000D4EB9 /* buffer.c in Sources */,
+				04587247201ABEC5000D4EB9 /* cmark_ctype.c in Sources */,
+				04587248201ABEC5000D4EB9 /* cmark.c in Sources */,
+				04587249201ABEC5000D4EB9 /* commonmark.c in Sources */,
+				0458724A201ABEC5000D4EB9 /* houdini_href_e.c in Sources */,
+				0458724B201ABEC5000D4EB9 /* houdini_html_e.c in Sources */,
+				0458724C201ABEC5000D4EB9 /* houdini_html_u.c in Sources */,
+				0458724D201ABEC5000D4EB9 /* html.c in Sources */,
+				0458724E201ABEC5000D4EB9 /* inlines.c in Sources */,
+				0458724F201ABEC5000D4EB9 /* iterator.c in Sources */,
+				04587250201ABEC5000D4EB9 /* latex.c in Sources */,
+				04587251201ABEC5000D4EB9 /* man.c in Sources */,
+				04587252201ABEC5000D4EB9 /* node.c in Sources */,
+				04587253201ABEC5000D4EB9 /* references.c in Sources */,
+				04587254201ABEC5000D4EB9 /* render.c in Sources */,
+				04587255201ABEC5000D4EB9 /* scanners.c in Sources */,
+				04587256201ABEC5000D4EB9 /* utf8.c in Sources */,
+				04587257201ABEC5000D4EB9 /* xml.c in Sources */,
+				04587258201ABEC5000D4EB9 /* SwiftMark.swift in Sources */,
+				04587259201ABEC5000D4EB9 /* SwiftMarkConvertToHTMLOperation.swift in Sources */,
+				0458725A201ABEC5000D4EB9 /* SwiftMarkConvertToXMLOperation.swift in Sources */,
+				0458725B201ABEC5000D4EB9 /* SwiftMarkError.swift in Sources */,
+				0458725C201ABEC5000D4EB9 /* SwiftMarkNode.swift in Sources */,
+				0458725D201ABEC5000D4EB9 /* SwiftMarkOperation.swift in Sources */,
+				0458725E201ABEC5000D4EB9 /* SwiftMarkOption.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +571,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -537,7 +593,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -551,14 +607,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -588,6 +650,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -601,14 +664,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -631,6 +700,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -658,7 +728,7 @@
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -685,7 +755,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/../Sources/**";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
