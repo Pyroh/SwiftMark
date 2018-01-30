@@ -13,6 +13,6 @@ class WindowController: NSWindowController {
         super.windowDidLoad()
         window?.titlebarAppearsTransparent = true
         window?.backgroundColor = NSColor.white
-        windowFrameAutosaveName = "SwiftMarkMainWindow" // Doesn't work using Xcode's "autosave name" property.
+        windowFrameAutosaveName = NSWindow.FrameAutosaveName(rawValue: "SwiftMarkMainWindow") // Doesn't work using Xcode's "autosave name" property.
     }
 }
