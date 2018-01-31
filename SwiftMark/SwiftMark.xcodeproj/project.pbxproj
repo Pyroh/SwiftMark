@@ -39,13 +39,11 @@
 		0482BEDB20212098003ABA91 /* iterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEBD20212096003ABA91 /* iterator.h */; };
 		0482BEDC20212098003ABA91 /* scanners.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEBE20212097003ABA91 /* scanners.h */; };
 		0482BEDD20212098003ABA91 /* commonmark.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEBF20212097003ABA91 /* commonmark.c */; };
-		0482BEDE20212098003ABA91 /* case_fold_switch.inc in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC020212097003ABA91 /* case_fold_switch.inc */; };
 		0482BEDF20212098003ABA91 /* man.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC120212097003ABA91 /* man.c */; };
 		0482BEE020212098003ABA91 /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC220212097003ABA91 /* references.c */; };
 		0482BEE120212098003ABA91 /* references.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEC320212097003ABA91 /* references.h */; };
 		0482BEE220212098003ABA91 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC420212097003ABA91 /* scanners.c */; };
 		0482BEE320212098003ABA91 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 0482BEC520212097003ABA91 /* COPYING */; };
-		0482BEE420212098003ABA91 /* entities.inc in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC620212097003ABA91 /* entities.inc */; };
 		0482BEE520212098003ABA91 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC720212097003ABA91 /* houdini_href_e.c */; };
 		0482BEE620212098003ABA91 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC820212098003ABA91 /* houdini_html_u.c */; };
 		0482BEE720212098003ABA91 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC920212098003ABA91 /* node.c */; };
@@ -390,7 +388,6 @@
 				0482BEF2202120B2003ABA91 /* SwiftMarkConvertToHTMLOperation.swift in Sources */,
 				0482BEF4202120B2003ABA91 /* SwiftMarkOption.swift in Sources */,
 				0482BECE20212098003ABA91 /* cmark_ctype.c in Sources */,
-				0482BEE420212098003ABA91 /* entities.inc in Sources */,
 				0482BEDF20212098003ABA91 /* man.c in Sources */,
 				0482BEF0202120B1003ABA91 /* SwiftMarkError.swift in Sources */,
 				0482BED920212098003ABA91 /* houdini_html_e.c in Sources */,
@@ -402,7 +399,6 @@
 				0482BEE620212098003ABA91 /* houdini_html_u.c in Sources */,
 				0482BEE220212098003ABA91 /* scanners.c in Sources */,
 				0482BED120212098003ABA91 /* inlines.c in Sources */,
-				0482BEDE20212098003ABA91 /* case_fold_switch.inc in Sources */,
 				0482BEDA20212098003ABA91 /* utf8.c in Sources */,
 				0482BECC20212098003ABA91 /* html.c in Sources */,
 				0482BECB20212098003ABA91 /* buffer.c in Sources */,
