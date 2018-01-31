@@ -43,7 +43,6 @@
 		0482BEE020212098003ABA91 /* references.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC220212097003ABA91 /* references.c */; };
 		0482BEE120212098003ABA91 /* references.h in Headers */ = {isa = PBXBuildFile; fileRef = 0482BEC320212097003ABA91 /* references.h */; };
 		0482BEE220212098003ABA91 /* scanners.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC420212097003ABA91 /* scanners.c */; };
-		0482BEE320212098003ABA91 /* COPYING in Resources */ = {isa = PBXBuildFile; fileRef = 0482BEC520212097003ABA91 /* COPYING */; };
 		0482BEE520212098003ABA91 /* houdini_href_e.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC720212097003ABA91 /* houdini_href_e.c */; };
 		0482BEE620212098003ABA91 /* houdini_html_u.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC820212098003ABA91 /* houdini_html_u.c */; };
 		0482BEE720212098003ABA91 /* node.c in Sources */ = {isa = PBXBuildFile; fileRef = 0482BEC920212098003ABA91 /* node.c */; };
@@ -365,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0482BEE320212098003ABA91 /* COPYING in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
