@@ -19,7 +19,7 @@ public class SwiftMarkOperation: Operation {
     private let encoding: String.Encoding
     
         /// The options passed to the parser.
-    open let options: SwiftMarkOptions
+    public let options: SwiftMarkOptions
         /// The block to execute with the result of the conversion.
     open var conversionCompleteBlock: ConversionCompleteBlock?
         /// The block to execute when an error occurs.
